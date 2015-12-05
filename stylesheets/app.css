@@ -1,0 +1,381 @@
+/* Create a rectangular shape*/
+/* Create a circle shape */
+/* Set the margin top, right, bottom, left*/
+/* line 4, ../sass/app.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/app.scss */
+body {
+  font-size: 16px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  background-color: #fff;
+}
+
+/* line 14, ../sass/app.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 15, ../sass/app.scss */
+.container {
+  width: 98%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 22, ../sass/app.scss */
+div {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: auto;
+  float: left;
+  text-align: center;
+}
+
+/* line 35, ../sass/app.scss */
+.col {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  display: inline-block;
+  padding: 0;
+  border-top: none;
+}
+/* line 41, ../sass/app.scss */
+.col .spacer {
+  position: inherit;
+  padding-top: 100%;
+}
+
+/* line 46, ../sass/app.scss */
+.grid {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  position: absolute;
+  background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat;
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid #0000e6;
+}
+
+/* line 57, ../sass/app.scss */
+.roof {
+  height: 8.33%;
+  width: 25%;
+  background: #106000;
+  position: absolute;
+  border-radius: 130% 10% 0 0;
+  margin-top: 50%;
+  margin-right: inherit;
+  margin-bottom: inherit;
+  margin-left: 66.66%;
+}
+
+/* line 61, ../sass/app.scss */
+.wall {
+  height: 25%;
+  width: 25%;
+  background: blue;
+  position: absolute;
+  margin-top: 58.33%;
+  margin-right: inherit;
+  margin-bottom: inherit;
+  margin-left: 66.66%;
+}
+
+/* line 66, ../sass/app.scss */
+.door {
+  height: 90%;
+  width: 40%;
+  background: #fff;
+  position: relative;
+  margin-top: 10%;
+  margin-right: inherit;
+  margin-bottom: inherit;
+  margin-left: 33.33%;
+  /*.doorSignHang{
+      position: absolute;
+      @include margins(40%, 0, 0, 20%);  
+      -ms-transform: rotate(-20deg); /* IE 9 */
+    /*    transform: rotate(-20deg);
+        #doorSignHang:after{
+            @include box(0, 0, transparent, absolute);
+            content:"";
+            @include margins(1%, 0, 0, 1%);  
+        border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 15px solid white;
+        }
+        #doorSignHang:before {
+            @include box(0px, 0px,transparent, absolute);
+            content:"";
+            border-left: 13px solid transparent;
+            border-right: 13px solid transparent;
+            border-bottom: 16px solid blue;
+        }
+}*/
+}
+/* line 69, ../sass/app.scss */
+.door .doorHandle {
+  height: 10%;
+  width: 10%;
+  background: #106088;
+  position: relative;
+  border-radius: 90%;
+  margin-top: 80%;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 5%;
+}
+
+/* line 96, ../sass/app.scss */
+.doorSign {
+  height: 7%;
+  width: 50%;
+  background: blue;
+  position: absolute;
+  margin-top: 50%;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 20%;
+  -ms-transform: rotate(-20deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-20deg);
+  /* Safari */
+  transform: rotate(-20deg);
+}
+/* line 102, ../sass/app.scss */
+.doorSign p {
+  font-size: 60%;
+  font-family: sans-serif;
+  color: white;
+  margin-top: 10%;
+}
+
+/*
+#doorHandle{
+    @include wall(6px,6px,$position);
+    border-radius: 10px;
+    margin: $doorHandleMargin 0;
+    background: $shopColor;
+}
+
+#doorSign{
+     @include window(10%, 60%, $shopColor, $position);
+    -ms-transform: rotate(-20deg); /* IE 9 */
+  /*  transform: rotate(-20deg);
+    margin-top: $doorSignMarginTop ;
+    margin-left: $doorSignMarginLeft;
+    & p{
+       font-size: 50%;
+        font-family: sans-serif;
+        color: $doorColor;
+        padding: 2px;
+    }
+}
+#doorSignHang{
+    position: $position;
+    margin-left: $doorSignHangMarginLeft;
+    margin-top: $doorSignHangMarginTop;  
+    -ms-transform: rotate(-20deg); /* IE 9 */
+/*    transform: rotate(-20deg);
+}
+    #doorSignHang:after{
+        @include wall(0px, 0px, $position);
+        content:"";
+        margin-top:1px;
+        margin-left:1px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 15px solid $doorColor;
+    }
+
+    #doorSignHang:before {
+        @include wall(0px, 0px, $position);
+        content:"";
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 16px solid $primaryColor;
+    }
+
+
+
+
+
+.c {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100px;
+  height: 0;
+  border: 20px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 100px solid #1abc9c;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}*/
+/*.c{box-sizing: content-box;
+    .t {
+        $width: 40%;
+        width: $width;
+	height: 0;
+	border-right: $width / 2 solid transparent;
+	border-bottom: $width solid red;
+	border-left: $width / 2 solid transparent;
+	box-sizing: content-box;
+	//If you have 'box-sizing:border-box' the trapezoid doesn't work.
+    }
+}*/
+@media only screen and (min-width: 481px) {
+  /* line 192, ../sass/app.scss */
+  .col {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    display: inline-block;
+    padding: 0;
+    border-top: none;
+  }
+  /* line 198, ../sass/app.scss */
+  .col .spacer {
+    position: inherit;
+    padding-top: 100%;
+  }
+
+  /* line 203, ../sass/app.scss */
+  .grid {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid #0000e6;
+  }
+
+  /* line 214, ../sass/app.scss */
+  .roof {
+    height: 12.5%;
+    width: 45%;
+    background: #106000;
+    position: absolute;
+    border-radius: 130% 10% 0 0;
+    margin-top: 37.66%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 53.33%;
+  }
+
+  /* line 218, ../sass/app.scss */
+  .wall {
+    height: 30%;
+    width: 40%;
+    background: blue;
+    position: absolute;
+    margin-top: 50%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 58.33%;
+  }
+  /* line 221, ../sass/app.scss */
+  .wall .window {
+    height: 60%;
+    width: 60%;
+    background: white;
+    position: absolute;
+    margin-top: 10%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 3%;
+  }
+  /* line 225, ../sass/app.scss */
+  .wall .door {
+    height: 90%;
+    width: 30%;
+    background: #fff;
+    position: relative;
+    margin-top: 7%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 65%;
+    /*.doorSignHang{
+        position: absolute;
+        @include margins(40%, 0, 0, 20%);  
+        -ms-transform: rotate(-20deg); /* IE 9 */
+    /*    transform: rotate(-20deg);
+        #doorSignHang:after{
+            @include box(0, 0, transparent, absolute);
+            content:"";
+            @include margins(1%, 0, 0, 1%);  
+        border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 15px solid white;
+        }
+        #doorSignHang:before {
+            @include box(0px, 0px,transparent, absolute);
+            content:"";
+            border-left: 13px solid transparent;
+            border-right: 13px solid transparent;
+            border-bottom: 16px solid blue;
+        }
+}*/
+  }
+  /* line 228, ../sass/app.scss */
+  .wall .door .doorHandle {
+    height: 10%;
+    width: 10%;
+    background: #106088;
+    position: relative;
+    border-radius: 90%;
+    margin-top: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 5%;
+  }
+
+  /* line 256, ../sass/app.scss */
+  .doorSign {
+    height: 7%;
+    width: 50%;
+    background: blue;
+    position: absolute;
+    margin-top: 65%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 20%;
+    -ms-transform: rotate(-20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-20deg);
+    /* Safari */
+    transform: rotate(-20deg);
+  }
+  /* line 262, ../sass/app.scss */
+  .doorSign p {
+    font-size: 60%;
+    font-family: sans-serif;
+    color: white;
+    margin-top: 5%;
+  }
+}

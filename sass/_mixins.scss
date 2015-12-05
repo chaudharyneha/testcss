@@ -1,0 +1,25 @@
+/* Create a rectangular shape*/
+@mixin box($height: auto, $width: auto, $color: auto, $position: auto){
+    height: $height;
+    width: $width;
+    background: $color;
+    position: $position;
+}
+/* Create a circle shape */
+@mixin shapeCircle($height: auto, $width: auto, $color: auto, $radius: auto, $position: auto){
+    @include box($height, $width, $color, $position);
+    border-radius: $radius;
+}
+/* Set the margin top, right, bottom, left*/
+@mixin margins($top: auto, $right: auto, $bottom: auto, $left: auto){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+@mixin browsercompatibility($inc, $time, $speed){
+    -webkit-transition: $inc $time $speed;
+    -moz-transition: $inc $time $speed;
+    -o-transition: $inc $time $speed;
+    transition: $inc $time $speed;
+}

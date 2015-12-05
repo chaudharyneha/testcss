@@ -1,0 +1,273 @@
+@import "compass/css3";
+@import "_mixins";
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+body {
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    background-color: #fff;
+}
+a {text-decoration: none;}
+.container {
+  width:98%;
+  height: 100%;//100%;
+  margin: 0 auto;
+  display: block;  
+}
+
+ div {
+     @include box(100%, 100%, transparent);
+     float:left;
+     text-align:center;
+    //padding-top:5%;
+    //line-height:1em;
+   // margin-top:-1.7em;
+    //color:white;
+ }
+  
+
+//for small screen
+//////////////////////////////////////////////////
+.col {
+    @include box(100%, 100%, transparent,relative);
+    @include margins(0, 0, 0, 0);
+    display: inline-block;
+    padding:0;
+    border-top: none;
+  .spacer {
+    position: inherit;
+    padding-top: 100%;
+   }
+}
+.grid {
+    @include margins(0, 0, 0, 0);
+    //height:60%;
+    position: absolute;
+    background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat  ;
+    //background-color: #fff;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid darken(blue, 5%);
+   // @include browsercompatibility(all, 1s, ease-out);
+}
+    .roof{
+        @include shapeCircle(8.33%, 25%, #106000, 130% 10% 0 0,absolute);
+        @include margins(50%, inherit, inherit, 66.66%);
+    }
+    .wall{
+       @include box (25%, 25%, blue,absolute);
+        @include margins(58.33%, inherit, inherit, 66.66%);
+    }
+
+.door{
+    @include box(90%, 40%, #fff, relative);
+    @include margins(10%, inherit, inherit, 33.33%);
+        .doorHandle{
+            @include shapeCircle(10%, 10%, #106088, 90%,relative);
+            @include margins(80%, 0, 0, 5%);
+        }
+        /*.doorSignHang{
+            position: absolute;
+            @include margins(40%, 0, 0, 20%);  
+            -ms-transform: rotate(-20deg); /* IE 9 */
+          //  -webkit-transform: rotate(-20deg); /* Safari */
+        /*    transform: rotate(-20deg);
+            #doorSignHang:after{
+                @include box(0, 0, transparent, absolute);
+                content:"";
+                @include margins(1%, 0, 0, 1%);  
+            border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 15px solid white;
+            }
+            #doorSignHang:before {
+                @include box(0px, 0px,transparent, absolute);
+                content:"";
+                border-left: 13px solid transparent;
+                border-right: 13px solid transparent;
+                border-bottom: 16px solid blue;
+            }
+    }*/
+}
+    .doorSign{
+         @include box(7%, 50%, blue,absolute);
+        @include margins(50%, 0, 0, 20%);
+        -ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Safari */
+        transform: rotate(-20deg);
+    & p{
+       font-size: 60%;
+        font-family: sans-serif;
+        color: white;
+        margin-top: 10%;
+    }
+    }
+//////////////////////////////////////////////////////////
+
+        
+/*
+#doorHandle{
+    @include wall(6px,6px,$position);
+    border-radius: 10px;
+    margin: $doorHandleMargin 0;
+    background: $shopColor;
+}
+
+#doorSign{
+     @include window(10%, 60%, $shopColor, $position);
+    -ms-transform: rotate(-20deg); /* IE 9 */
+  //  -webkit-transform: rotate(-20deg); /* Safari */
+  /*  transform: rotate(-20deg);
+    margin-top: $doorSignMarginTop ;
+    margin-left: $doorSignMarginLeft;
+    & p{
+       font-size: 50%;
+        font-family: sans-serif;
+        color: $doorColor;
+        padding: 2px;
+    }
+}
+#doorSignHang{
+    position: $position;
+    margin-left: $doorSignHangMarginLeft;
+    margin-top: $doorSignHangMarginTop;  
+    -ms-transform: rotate(-20deg); /* IE 9 */
+ //   -webkit-transform: rotate(-20deg); /* Safari */
+/*    transform: rotate(-20deg);
+}
+    #doorSignHang:after{
+        @include wall(0px, 0px, $position);
+        content:"";
+        margin-top:1px;
+        margin-left:1px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 15px solid $doorColor;
+    }
+
+    #doorSignHang:before {
+        @include wall(0px, 0px, $position);
+        content:"";
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 16px solid $primaryColor;
+    }
+
+
+
+
+
+.c {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100px;
+  height: 0;
+  border: 20px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 100px solid #1abc9c;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}*/
+/*.c{box-sizing: content-box;
+    .t {
+        $width: 40%;
+        width: $width;
+	height: 0;
+	border-right: $width / 2 solid transparent;
+	border-bottom: $width solid red;
+	border-left: $width / 2 solid transparent;
+	box-sizing: content-box;
+	//If you have 'box-sizing:border-box' the trapezoid doesn't work.
+    }
+}*/
+/////////////////////////////////////////////////////////
+@media only screen and (min-width: 481px) { 
+    .col {
+        @include box(100%, 100%, transparent,relative);
+        @include margins(0, 0, 0, 0);
+        display: inline-block;
+        padding:0;
+        border-top: none;
+        .spacer {
+        position: inherit;
+        padding-top: 100%;
+   }
+}
+    .grid {
+    @include margins(0, 0, 0, 0);
+    //height:60%;
+    position: absolute;
+    background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat  ;
+    //background-color: #fff;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid darken(blue, 5%);
+   // @include browsercompatibility(all, 1s, ease-out);
+    }
+    .roof{
+        @include shapeCircle(12.50%, 45%, #106000, 130% 10% 0 0,absolute);
+        @include margins(37.66%, inherit, inherit, 53.33%);
+    }
+    .wall{
+       @include box (30%, 40%, blue,absolute);
+        @include margins(50%, inherit, inherit, 58.33%);
+    .window{
+        @include box (60%, 60%, white,absolute);
+        @include margins(10%, inherit, inherit, 3%);
+    }
+    .door{
+    @include box(90%, 30%, #fff, relative);
+    @include margins(7%, inherit, inherit, 65%);
+        .doorHandle{
+            @include shapeCircle(10%, 10%, #106088, 90%,relative);
+            @include margins(100%, 0, 0, 5%);
+        }
+        /*.doorSignHang{
+            position: absolute;
+            @include margins(40%, 0, 0, 20%);  
+            -ms-transform: rotate(-20deg); /* IE 9 */
+          //  -webkit-transform: rotate(-20deg); /* Safari */
+        /*    transform: rotate(-20deg);
+            #doorSignHang:after{
+                @include box(0, 0, transparent, absolute);
+                content:"";
+                @include margins(1%, 0, 0, 1%);  
+            border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 15px solid white;
+            }
+            #doorSignHang:before {
+                @include box(0px, 0px,transparent, absolute);
+                content:"";
+                border-left: 13px solid transparent;
+                border-right: 13px solid transparent;
+                border-bottom: 16px solid blue;
+            }
+    }*/ 
+}
+    }
+    .doorSign{
+         @include box(7%, 50%, blue,absolute);
+        @include margins(65%, 0, 0, 20%);
+        -ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Safari */
+        transform: rotate(-20deg);
+    & p{
+       font-size: 60%;
+        font-family: sans-serif;
+        color: white;
+        margin-top: 5%;
+    }
+    }
+}
+@media only screen and (min-width:482) {
+}
+@media only screen and (min-width: 1280px) {
+}
