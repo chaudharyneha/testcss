@@ -1,0 +1,88 @@
+/* ----------------------------------------------*/
+    /* john drawing css made with rectangle and circle with some transform */
+    .john{
+        @include box(35%, 20%, transparent, absolute);
+        @include margins(53%, inherit, inherit, 2%);
+        .johnFace{
+            @include box(30%, 45%, gray, absolute);
+            @include margins(12%, inherit, inherit, 30%);
+            @include transformX(8,0);
+        }
+        .johnHair{
+            @include shapeCircle(13%, 50%, black, 50% 180% 180% 180%, absolute);
+            @include margins(-2%, inherit, inherit, 26%);
+            @include transformX(8,0);   
+        }
+        .johnHairFront{
+            @include shapeCircle(13%, 40%, black, 80%, absolute);
+            @include margins(0, inherit, inherit, 46%);
+            @include transformY(15,0); 
+        }
+        .johnEar{
+            @include shapeCircle(7%, 10%, gray,40% 0 0 40%, absolute);
+            @include margins(25%, inherit, inherit, 25%);
+            @include transformX(15,0); 
+        }   
+        .johnEyeRight{
+            @include shapeCircle(5%, 9%, black,80%, absolute);
+            @include margins(25%, inherit, inherit, 58%);
+            border: .4em solid white;
+        }
+        .johnEyeLeft{
+            @include shapeCircle(5%, 9%, black,80%, absolute);
+            @include margins(25%, inherit, inherit, 68%);
+            border: .4em solid white;
+        }
+        .johnNose{
+            @include shapeCircle(4%, 12%, gray,0 40% 40% 0, absolute);
+            @include margins(35%, inherit, inherit, 68%);
+            @include transformX(19,0);  
+        }
+        .johnMouth{
+            @include shapeCircle(2%, 10%, darkgray,40% 0 0 40%, absolute);
+            @include margins(45%, inherit, inherit, 67%);
+            @include transformX(30,15);
+        }
+        .johnBody{
+            @include box(30%, 40%, pink, absolute);
+            @include margins(68%, inherit, inherit, 34%);
+            @include transformY(8,0); 
+        }
+        .johnHand{
+            @include shapeCircle(7%, 40%, darkgray, 0 90% 90% 0, absolute);
+            @include margins(85%, inherit, inherit, 25%);
+            @include transformX(5,-45);
+        }
+        .johnHandWrist{
+            @include shapeCircle(8%, 35%, darkgray, 90%, absolute);
+            @include margins(99%, inherit, inherit, 30%);
+             @include transformX(50,185);
+        }
+        .johnShoppingBagHang{
+            @include shapeCircle(10%, 15%, transparent, 90% 90% 0 0, absolute);
+            @include margins(97%, inherit, inherit, 56%);
+            @include transformX(10,0);
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+        }
+        .johnShoppingBag{
+            @include box(30%, 45%, green, absolute);
+            @include margins(105%, inherit, inherit, 42%);
+            border-bottom: 8px outset brown;
+            border-left: 8px solid brown;
+        }
+        .johnLeg{
+            @include box(30%, 25%, blue, absolute);
+            @include margins(118%, inherit, inherit, 42%);
+            @include transformX(15,0);
+        }
+        .johnShoeRight{
+            @include shapeCircle(4%, 20%, black,0 40% 20% 0, absolute);
+            @include margins(160%, inherit, inherit, 47%); 
+            border-right: 4px solid white;
+        }
+        .johnShoeLeft{
+            @include shapeCircle(4%, 20%, black,0 40% 20% 0, absolute);
+            @include margins(160%, inherit, inherit, 60%); 
+        }
+    }

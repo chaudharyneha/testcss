@@ -4,12 +4,12 @@
 	-moz-box-sizing: $type;
 	box-sizing: $type;
 }
-@mixin transformX($skew, $rotate){
+@mixin transformX($skew: 0, $rotate: 0){
         -ms-transform: skewX($skew+deg) rotate($rotate+deg); /* IE 9 */
         -webkit-transform: skewX($skew+deg) rotate($rotate+deg); /* Safari */
         transform: skewX($skew+deg) rotate($rotate+deg);
 }
-@mixin transformY($skew, $rotate){
+@mixin transformY($skew: 0, $rotate: 0){
         -ms-transform: skewY($skew+deg) rotate($rotate+deg); /* IE 9 */
         -webkit-transform: skewY($skew+deg) rotate($rotate+deg); /* Safari */
         transform: skewY($skew+deg) rotate($rotate+deg);
@@ -26,7 +26,7 @@
     @include box($height, $width, $color, $position);
     border-radius: $radius;
 }
-/* Set border properties */
+/* Set border properties  */
 @mixin border($width, $style,$color){
     border-width: $width;
     border-style: $style;
