@@ -335,6 +335,143 @@ a {text-decoration: none;}
         border: 1px solid darken(blue, 5%);
         // @include browsercompatibility(all, 1s, ease-out);
     }
+    
+    
+   //----------------------------------------
+    .john{
+        @include box(35%, 20%, transparent, absolute);
+        @include margins(53%, inherit, inherit, 2%);
+        .johnFace{
+            @include box(30%, 45%, gray, absolute);
+            @include margins(12%, inherit, inherit, 30%);
+            -ms-transform: skewY(5deg); /* IE 9 */
+            -webkit-transform: skewY(5deg); /* Safari */
+            transform: skewX(8deg); /* Standard syntax */
+        }
+        .johnHair{
+            @include shapeCircle(13%, 45%, black, 0 0 180% 180%, absolute);
+            @include margins(0, inherit, inherit, 26%);
+            -ms-transform: skewY(5deg); /* IE 9 */
+            -webkit-transform: skewY(5deg); /* Safari */
+            transform: skewX(8deg); /* Standard syntax */   
+        }
+        .johnHairFront{
+            @include shapeCircle(13%, 45%, black, 80%, absolute);
+            @include margins(0, inherit, inherit, 46%);
+            -ms-transform: skewY(5deg); /* IE 9 */
+            -webkit-transform: skewY(5deg); /* Safari */
+            transform: skewX(20deg); /* Standard syntax */ 
+        }
+        .johnEar{
+           @include shapeCircle(7%, 10%, gray,40% 0 0 40%, absolute);
+            @include margins(25%, inherit, inherit, 25%);
+            -ms-transform: skewX(5deg); /* IE 9 */
+            -webkit-transform: skewX(5deg); /* Safari */
+            transform: skewX(15deg); /* Standard syntax */ 
+        }   
+        .johnEyeRight{
+            @include shapeCircle(6%, 10%, black,80%, absolute);
+            @include margins(25%, inherit, inherit, 58%);
+            border-width: 8px;
+            border-color: white;
+            border-style: solid;
+        }
+        .johnEyeLeft{
+            @include shapeCircle(6%, 10%, black,80%, absolute);
+            @include margins(25%, inherit, inherit, 68%);
+            border-width: 8px;
+            border-color: white;
+            border-style: solid;
+        }
+        .johnNose{
+            @include shapeCircle(4%, 12%, gray,0 40% 40% 0, absolute);
+            @include margins(35%, inherit, inherit, 68%);
+            -ms-transform: skewX(5deg); /* IE 9 */
+            -webkit-transform: skewX(5deg); /* Safari */
+            transform: skewX(19deg); /* Standard syntax */ 
+        }
+        .johnMouth{
+            @include shapeCircle(2%, 10%, darkgray,40% 0 0 40%, absolute);
+            @include margins(45%, inherit, inherit, 67%);
+            -ms-transform: skewX(5deg); /* IE 9 */
+            -webkit-transform: skewX(5deg); /* Safari */
+            transform: skewX(30deg); /* Standard syntax */
+            transform: rotate(15deg);
+            
+        }
+        .johnBody{
+            @include box(30%, 40%, pink, absolute);
+            @include margins(68%, inherit, inherit, 34%);
+            -ms-transform: skewY(5deg); /* IE 9 */
+            -webkit-transform: skewY(5deg); /* Safari */
+            transform: skewY(8deg); /* Standard syntax */
+        }
+        .johnHand{
+            /*@include box(20%, 10%, orange, absolute);
+            @include margins(68%, inherit, inherit, 30%);
+            -ms-transform: skewY(5deg); /* IE 9 */
+           // -webkit-transform: skewY(5deg); /* Safari */
+            //transform: skewY(8deg); /* Standard syntax */
+             //transform: rotate(45deg);*/
+            @include shapeCircle(7%, 40%, darkgray, 0 90% 90% 0, absolute);
+            @include margins(85%, inherit, inherit, 25%);
+            transform: skewX(50deg);
+            transform: rotate(-45deg);
+        }
+        .johnHandWrist{
+            @include shapeCircle(7%, 40%, darkgray, 90%, absolute);
+            @include margins(99%, inherit, inherit, 29%);
+            transform: skewX(50deg);
+            transform: rotate(185deg);
+        }
+        .johnShoppingBagHang{
+            @include shapeCircle(10%, 15%, transparent, 90% 90% 0 0, absolute);
+            @include margins(95%, inherit, inherit, 56%);
+            //transform: skewX(50deg);
+            border-top: 3px solid black;
+              border-left: 3px solid black;
+              border-right: 3px solid black;
+            transform: skewX(10deg);
+        }
+        .johnShoppingBag{
+            @include box(30%, 45%, green, absolute);
+            @include margins(105%, inherit, inherit, 42%);
+            border-bottom: 8px outset brown;
+            border-left: 8px solid brown;
+        }
+        .johnLeg{
+            @include box(30%, 25%, blue, absolute);
+            @include margins(118%, inherit, inherit, 42%);
+            transform: skewX(15deg);
+            //transform: rotate(-10deg);
+        }
+        .johnShoeRight{
+            @include shapeCircle(4%, 20%, black,0 40% 20% 0, absolute);
+            @include margins(160%, inherit, inherit, 47%); 
+            border-right: 4px solid white;
+        }
+        .johnShoeLeft{
+            @include shapeCircle(4%, 20%, black,0 40% 20% 0, absolute);
+            @include margins(160%, inherit, inherit, 60%); 
+        }
+    }
+    
+/*    <div class="john">
+                <div class="johnFace"></div>
+                <div class="johnHair"></div>
+                <div class="johnHairFront"></div>
+                <div class="johnEar"></div>
+                <div class="johnEyeRight"></div>
+                <div class="johnEyeLeft"></div>
+                <div class="johnNose"></div>
+                <div class="johnmouth"></div>
+                <div class="johnBody"></div>
+                <div class="johnHand"></div>
+                <div class="johnShoppingBag"></div>
+                <div class="johnFoot";
+            </div>
+    */
+    
     .roof{
         @include shapeCircle(15%, 55%, #106000, 130% 10% 0 0,absolute);
         @include margins(35%, inherit, inherit, 45.33%);
@@ -372,7 +509,7 @@ a {text-decoration: none;}
         .car2Body{
             @include box(20%, 70%, transparent, absolute);
             @include margins(45%, inherit, inherit, 20%);
-           // border: 2px solid blue;
+            border: 2px solid blue;
         }
         .car2Storage{
             @include box(20%, 25%, transparent, absolute);
