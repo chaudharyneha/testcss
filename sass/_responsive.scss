@@ -1,5 +1,5 @@
 .col {
-    @include box(0%, 100%, transparent,relative);
+    @include box(100%, 100%, transparent,relative);
     //@include box(100%, 100%, transparent,relative);
     @include margins(0, 0, 0, 0);
     display: inline-block;
@@ -11,7 +11,7 @@
    }
 }
 .grid {
-    @include margins(0, 0, 0, 0);
+    @include margins(-35%, 0, 0, 0);
     //height:60%;
     position: absolute;
     background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat  ;
