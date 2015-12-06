@@ -131,6 +131,11 @@
 @media only screen and (min-width: 979px) { 
     @import "_responsive";
     @import "_john";
+    //   Variables
+    $red: #ff0000;
+    $wheelColor: #5e4545;
+    $silver: #C0C0C0;
+    
     /* Shop with big car */
     .roof{
         @include shapeCircle(15%, 55%, #106000, 130% 10% 0 0,absolute);
@@ -168,49 +173,49 @@
         @include margins(10%, inherit, inherit, 3%);
         z-index: 1;
         .car2Body{
-            @include box(20%, 70%, transparent, absolute);
-            @include margins(45%, inherit, inherit, 20%);
-            border: 2px solid blue;
+            @include box(20%, 75%, $red, absolute);
+            @include margins(45%, inherit, inherit, 25%);
+            border: 2px solid $silver;
         }
         .car2Storage{
-            @include box(20%, 25%, transparent, absolute);
-            @include margins(40%, inherit, inherit, -4%);
-            border: 2px solid blue;
+            @include box(20%, 25%, $red, absolute);
+            @include margins(40%, inherit, inherit, 1%);
+            border: 2px solid $silver;
             @include transformY(25,0);
         }
         .car2Bonet{
-            @include box(15%, 20%, transparent, absolute);
-            @include margins(35%, inherit, inherit, 7%);
-            border: 2px solid blue;
+            @include box(15%, 20%, $red, absolute);
+            @include margins(35%, inherit, inherit, 12%);
+            border: 2px solid $silver;
             @include transformX(65,0);
         }
         .car2BackGlass{
-            @include box(16%, 22%, transparent, absolute);
-            @include margins(30%, inherit, inherit, 18%);
+            @include box(16%, 22%, $red, absolute);
+            @include margins(30%, inherit, inherit, 23%);
             @include transformY(0, 25);
-            border: 2px solid blue;
+            border: 2px solid $silver;
         }
         .car2Roof{
-            @include box(13%, 25%, transparent, absolute);
-            @include margins(26%, inherit, inherit, 31%);
+            @include box(13%, 27%, $red, absolute);
+            @include margins(26%, inherit, inherit, 36%);
             @include transformX(65,0);
-            border: 2px solid blue;
+            border: 2px solid $silver;
         }
         .car2Window{
-             @include box(16%, 0%, transparent, absolute);
-            @include margins(34%, inherit, inherit, 76%);
-            @include transformX(65,0);
-            border: 2px solid blue;
+             @include box(20%, 10%, $red, absolute);
+            @include margins(33%, inherit, inherit, 77%);
+            @include transformX(65,10);
+            border: 2px solid $silver;
         }
         .car2WheelFront{
-            @include shapeCircle(23.5%, 16.65%, transparent, 80%,absolute);
-            @include margins(50%, inherit, inherit, 60%);
-            border: 8px solid blue;
+            @include shapeCircle(23.5%, 16.65%, $wheelColor, 80%,absolute);
+            @include margins(50%, inherit, inherit, 65%);
+            border: 8px solid $silver;
         }
         .car2WheelRear{
-            @include shapeCircle(23.5%, 16.65%, transparent, 80%,absolute);
-            @include margins(50%, inherit, inherit, 30%);
-            border: 8px solid blue;
+            @include shapeCircle(23.5%, 16.65%, $wheelColor, 80%,absolute);
+            @include margins(50%, inherit, inherit, 35%);
+            border: 8px solid $silver;
         }
     }
     .door{
@@ -236,5 +241,4 @@
 
 /*******************************************************/
 /* Scene for very-Large Screen. */
-//@media only screen and (min-width: 1280px) 
-//{ 
+@media only screen and (min-width: 1280px) { }

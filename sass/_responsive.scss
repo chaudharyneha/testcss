@@ -1,9 +1,10 @@
 .col {
-    @include box(100%, 100%, transparent,relative);
+    @include box(0%, 100%, transparent,relative);
+    //@include box(100%, 100%, transparent,relative);
     @include margins(0, 0, 0, 0);
     display: inline-block;
-    padding:0;
-    border-top: none;
+    //padding:0;
+    //border-top: none;
   .spacer {
     position: inherit;
     padding-top: 100%;

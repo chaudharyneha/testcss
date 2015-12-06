@@ -40,7 +40,7 @@ div {
 /* Scene for small Screen. */
 /* line 1, ../sass/_responsive.scss */
 .col {
-  height: 100%;
+  height: 0%;
   width: 100%;
   background: transparent;
   position: relative;
@@ -49,16 +49,14 @@ div {
   margin-bottom: 0;
   margin-left: 0;
   display: inline-block;
-  padding: 0;
-  border-top: none;
 }
-/* line 7, ../sass/_responsive.scss */
+/* line 8, ../sass/_responsive.scss */
 .col .spacer {
   position: inherit;
   padding-top: 100%;
 }
 
-/* line 12, ../sass/_responsive.scss */
+/* line 13, ../sass/_responsive.scss */
 .grid {
   margin-top: 0;
   margin-right: 0;
@@ -410,7 +408,7 @@ div {
 @media only screen and (min-width: 481px) {
   /* line 1, ../sass/_responsive.scss */
   .col {
-    height: 100%;
+    height: 0%;
     width: 100%;
     background: transparent;
     position: relative;
@@ -419,16 +417,14 @@ div {
     margin-bottom: 0;
     margin-left: 0;
     display: inline-block;
-    padding: 0;
-    border-top: none;
   }
-  /* line 7, ../sass/_responsive.scss */
+  /* line 8, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 12, ../sass/_responsive.scss */
+  /* line 13, ../sass/_responsive.scss */
   .grid {
     margin-top: 0;
     margin-right: 0;
@@ -879,7 +875,7 @@ div {
 @media only screen and (min-width: 979px) {
   /* line 1, ../sass/_responsive.scss */
   .col {
-    height: 100%;
+    height: 0%;
     width: 100%;
     background: transparent;
     position: relative;
@@ -888,16 +884,14 @@ div {
     margin-bottom: 0;
     margin-left: 0;
     display: inline-block;
-    padding: 0;
-    border-top: none;
   }
-  /* line 7, ../sass/_responsive.scss */
+  /* line 8, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 12, ../sass/_responsive.scss */
+  /* line 13, ../sass/_responsive.scss */
   .grid {
     margin-top: 0;
     margin-right: 0;
@@ -1175,7 +1169,7 @@ div {
   }
 
   /* Shop with big car */
-  /* line 135, ../sass/app.scss */
+  /* line 140, ../sass/app.scss */
   .roof {
     height: 15%;
     width: 55%;
@@ -1188,7 +1182,7 @@ div {
     margin-left: 45.33%;
   }
 
-  /* line 139, ../sass/app.scss */
+  /* line 144, ../sass/app.scss */
   .wall {
     height: 35%;
     width: 50%;
@@ -1199,7 +1193,7 @@ div {
     margin-bottom: inherit;
     margin-left: 50%;
   }
-  /* line 142, ../sass/app.scss */
+  /* line 147, ../sass/app.scss */
   .wall .window {
     height: 60%;
     width: 60%;
@@ -1210,7 +1204,7 @@ div {
     margin-bottom: inherit;
     margin-left: 3%;
   }
-  /* line 145, ../sass/app.scss */
+  /* line 150, ../sass/app.scss */
   .wall .window table {
     border-collapse: collapse;
     height: 100%;
@@ -1219,26 +1213,26 @@ div {
     position: absolute;
     z-index: 2;
   }
-  /* line 150, ../sass/app.scss */
+  /* line 155, ../sass/app.scss */
   .wall .window table, .wall .window td, .wall .window th {
     border: 1px solid black;
   }
-  /* line 153, ../sass/app.scss */
+  /* line 158, ../sass/app.scss */
   .wall .window .smallWindow {
     visibility: hidden;
   }
-  /* line 156, ../sass/app.scss */
+  /* line 161, ../sass/app.scss */
   .wall .window .largeWindow {
     visibility: visible;
   }
 
-  /* line 161, ../sass/app.scss */
+  /* line 166, ../sass/app.scss */
   .car1 {
     visibility: hidden;
   }
 
   /* Large car */
-  /* line 165, ../sass/app.scss */
+  /* line 170, ../sass/app.scss */
   .car2 {
     position: absolute;
     height: 60%;
@@ -1251,131 +1245,131 @@ div {
     margin-left: 3%;
     z-index: 1;
   }
-  /* line 170, ../sass/app.scss */
+  /* line 175, ../sass/app.scss */
   .car2 .car2Body {
     height: 20%;
-    width: 70%;
-    background: transparent;
+    width: 75%;
+    background: #ff0000;
     position: absolute;
     margin-top: 45%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 20%;
-    border: 2px solid blue;
+    margin-left: 25%;
+    border: 2px solid #C0C0C0;
   }
-  /* line 175, ../sass/app.scss */
+  /* line 180, ../sass/app.scss */
   .car2 .car2Storage {
     height: 20%;
     width: 25%;
-    background: transparent;
+    background: #ff0000;
     position: absolute;
     margin-top: 40%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: -4%;
-    border: 2px solid blue;
+    margin-left: 1%;
+    border: 2px solid #C0C0C0;
     -ms-transform: skewY(25deg) rotate(0deg);
     /* IE 9 */
     -webkit-transform: skewY(25deg) rotate(0deg);
     /* Safari */
     transform: skewY(25deg) rotate(0deg);
   }
-  /* line 181, ../sass/app.scss */
+  /* line 186, ../sass/app.scss */
   .car2 .car2Bonet {
     height: 15%;
     width: 20%;
-    background: transparent;
+    background: #ff0000;
     position: absolute;
     margin-top: 35%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 7%;
-    border: 2px solid blue;
+    margin-left: 12%;
+    border: 2px solid #C0C0C0;
     -ms-transform: skewX(65deg) rotate(0deg);
     /* IE 9 */
     -webkit-transform: skewX(65deg) rotate(0deg);
     /* Safari */
     transform: skewX(65deg) rotate(0deg);
   }
-  /* line 187, ../sass/app.scss */
+  /* line 192, ../sass/app.scss */
   .car2 .car2BackGlass {
     height: 16%;
     width: 22%;
-    background: transparent;
+    background: #ff0000;
     position: absolute;
     margin-top: 30%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 18%;
+    margin-left: 23%;
     -ms-transform: skewY(0deg) rotate(25deg);
     /* IE 9 */
     -webkit-transform: skewY(0deg) rotate(25deg);
     /* Safari */
     transform: skewY(0deg) rotate(25deg);
-    border: 2px solid blue;
+    border: 2px solid #C0C0C0;
   }
-  /* line 193, ../sass/app.scss */
+  /* line 198, ../sass/app.scss */
   .car2 .car2Roof {
     height: 13%;
-    width: 25%;
-    background: transparent;
+    width: 27%;
+    background: #ff0000;
     position: absolute;
     margin-top: 26%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 31%;
+    margin-left: 36%;
     -ms-transform: skewX(65deg) rotate(0deg);
     /* IE 9 */
     -webkit-transform: skewX(65deg) rotate(0deg);
     /* Safari */
     transform: skewX(65deg) rotate(0deg);
-    border: 2px solid blue;
+    border: 2px solid #C0C0C0;
   }
-  /* line 199, ../sass/app.scss */
+  /* line 204, ../sass/app.scss */
   .car2 .car2Window {
-    height: 16%;
-    width: 0%;
-    background: transparent;
+    height: 20%;
+    width: 10%;
+    background: #ff0000;
     position: absolute;
-    margin-top: 34%;
+    margin-top: 33%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 76%;
-    -ms-transform: skewX(65deg) rotate(0deg);
+    margin-left: 77%;
+    -ms-transform: skewX(65deg) rotate(10deg);
     /* IE 9 */
-    -webkit-transform: skewX(65deg) rotate(0deg);
+    -webkit-transform: skewX(65deg) rotate(10deg);
     /* Safari */
-    transform: skewX(65deg) rotate(0deg);
-    border: 2px solid blue;
+    transform: skewX(65deg) rotate(10deg);
+    border: 2px solid #C0C0C0;
   }
-  /* line 205, ../sass/app.scss */
+  /* line 210, ../sass/app.scss */
   .car2 .car2WheelFront {
     height: 23.5%;
     width: 16.65%;
-    background: transparent;
+    background: #5e4545;
     position: absolute;
     border-radius: 80%;
     margin-top: 50%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 60%;
-    border: 8px solid blue;
+    margin-left: 65%;
+    border: 8px solid #C0C0C0;
   }
-  /* line 210, ../sass/app.scss */
+  /* line 215, ../sass/app.scss */
   .car2 .car2WheelRear {
     height: 23.5%;
     width: 16.65%;
-    background: transparent;
+    background: #5e4545;
     position: absolute;
     border-radius: 80%;
     margin-top: 50%;
     margin-right: inherit;
     margin-bottom: inherit;
-    margin-left: 30%;
-    border: 8px solid blue;
+    margin-left: 35%;
+    border: 8px solid #C0C0C0;
   }
 
-  /* line 216, ../sass/app.scss */
+  /* line 221, ../sass/app.scss */
   .door {
     height: 90%;
     width: 30%;
@@ -1386,7 +1380,7 @@ div {
     margin-bottom: inherit;
     margin-left: 65%;
   }
-  /* line 219, ../sass/app.scss */
+  /* line 224, ../sass/app.scss */
   .door .doorHandle {
     height: 10%;
     width: 10%;
@@ -1399,7 +1393,7 @@ div {
     margin-left: 5%;
   }
 
-  /* line 224, ../sass/app.scss */
+  /* line 229, ../sass/app.scss */
   .doorSign {
     height: 7%;
     width: 50%;
@@ -1415,7 +1409,7 @@ div {
     /* Safari */
     transform: skewX(0deg) rotate(-20deg);
   }
-  /* line 228, ../sass/app.scss */
+  /* line 233, ../sass/app.scss */
   .doorSign p {
     font-size: 60%;
     font-family: sans-serif;
