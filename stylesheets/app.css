@@ -1,10 +1,16 @@
+/* 
+* Sociomantic HTML/CSS Task
+* Completed by Neha Chaudhary Seth
+*/
+/* browser support */
 /* Create a rectangular shape*/
 /* Create a circle shape */
+/* Set border properties */
 /* Set the margin top, right, bottom, left*/
-/* line 4, ../sass/app.scss */
+/* line 8, ../sass/app.scss */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -12,23 +18,15 @@
 body {
   font-size: 16px;
   font-family: Helvetica, Arial, Sans-Serif;
-  background-color: #fff;
 }
 
 /* line 14, ../sass/app.scss */
-a {
-  text-decoration: none;
-}
-
-/* line 15, ../sass/app.scss */
 .container {
-  width: 98%;
-  height: 100%;
-  margin: 0 auto;
+  @box (100%, 98%, inherit,inherit);
   display: block;
 }
 
-/* line 22, ../sass/app.scss */
+/* line 19, ../sass/app.scss */
 div {
   height: 100%;
   width: 100%;
@@ -38,7 +36,9 @@ div {
   text-align: center;
 }
 
-/* line 35, ../sass/app.scss */
+/*******************************************************/
+/* Scene for small Screen. */
+/* line 1, ../sass/_responsive.scss */
 .col {
   height: 100%;
   width: 100%;
@@ -52,13 +52,13 @@ div {
   padding: 0;
   border-top: none;
 }
-/* line 41, ../sass/app.scss */
+/* line 7, ../sass/_responsive.scss */
 .col .spacer {
   position: inherit;
   padding-top: 100%;
 }
 
-/* line 46, ../sass/app.scss */
+/* line 12, ../sass/_responsive.scss */
 .grid {
   margin-top: 0;
   margin-right: 0;
@@ -71,7 +71,7 @@ div {
   border: 1px solid #0000e6;
 }
 
-/* line 57, ../sass/app.scss */
+/* line 28, ../sass/app.scss */
 .roof {
   height: 8.33%;
   width: 25%;
@@ -84,7 +84,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 32, ../sass/app.scss */
 .wall {
   height: 25%;
   width: 25%;
@@ -96,7 +96,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 37, ../sass/app.scss */
 .door {
   height: 90%;
   width: 40%;
@@ -106,29 +106,8 @@ div {
   margin-right: inherit;
   margin-bottom: inherit;
   margin-left: 33.33%;
-  /*.doorSignHang{
-      position: absolute;
-      @include margins(40%, 0, 0, 20%);  
-      -ms-transform: rotate(-20deg); /* IE 9 */
-    /*    transform: rotate(-20deg);
-        #doorSignHang:after{
-            @include box(0, 0, transparent, absolute);
-            content:"";
-            @include margins(1%, 0, 0, 1%);  
-        border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 15px solid white;
-        }
-        #doorSignHang:before {
-            @include box(0px, 0px,transparent, absolute);
-            content:"";
-            border-left: 13px solid transparent;
-            border-right: 13px solid transparent;
-            border-bottom: 16px solid blue;
-        }
-}*/
 }
-/* line 69, ../sass/app.scss */
+/* line 40, ../sass/app.scss */
 .door .doorHandle {
   height: 10%;
   width: 10%;
@@ -141,7 +120,7 @@ div {
   margin-left: 5%;
 }
 
-/* line 96, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .doorSign {
   height: 7%;
   width: 50%;
@@ -151,98 +130,21 @@ div {
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 20%;
-  -ms-transform: rotate(-20deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-20deg);
-  /* Safari */
-  transform: rotate(-20deg);
+  -moz-transform: 0;
+  -webkit-transform: 0;
+  transform: 0;
 }
-/* line 102, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 .doorSign p {
   font-size: 60%;
-  font-family: sans-serif;
   color: white;
   margin-top: 10%;
 }
 
-/*
-#doorHandle{
-    @include wall(6px,6px,$position);
-    border-radius: 10px;
-    margin: $doorHandleMargin 0;
-    background: $shopColor;
-}
-
-#doorSign{
-     @include window(10%, 60%, $shopColor, $position);
-    -ms-transform: rotate(-20deg); /* IE 9 */
-  /*  transform: rotate(-20deg);
-    margin-top: $doorSignMarginTop ;
-    margin-left: $doorSignMarginLeft;
-    & p{
-       font-size: 50%;
-        font-family: sans-serif;
-        color: $doorColor;
-        padding: 2px;
-    }
-}
-#doorSignHang{
-    position: $position;
-    margin-left: $doorSignHangMarginLeft;
-    margin-top: $doorSignHangMarginTop;  
-    -ms-transform: rotate(-20deg); /* IE 9 */
-/*    transform: rotate(-20deg);
-}
-    #doorSignHang:after{
-        @include wall(0px, 0px, $position);
-        content:"";
-        margin-top:1px;
-        margin-left:1px;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-bottom: 15px solid $doorColor;
-    }
-
-    #doorSignHang:before {
-        @include wall(0px, 0px, $position);
-        content:"";
-        border-left: 13px solid transparent;
-        border-right: 13px solid transparent;
-        border-bottom: 16px solid $primaryColor;
-    }
-
-
-
-
-
-.c {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 100px;
-  height: 0;
-  border: 20px solid rgba(0,0,0,0);
-  border-top: 0 solid;
-  border-bottom: 100px solid #1abc9c;
-  font: normal 100%/normal Arial, Helvetica, sans-serif;
-  color: rgba(0,0,0,1);
-  -o-text-overflow: clip;
-  text-overflow: clip;
-}*/
-/*.c{box-sizing: content-box;
-    .t {
-        $width: 40%;
-        width: $width;
-	height: 0;
-	border-right: $width / 2 solid transparent;
-	border-bottom: $width solid red;
-	border-left: $width / 2 solid transparent;
-	box-sizing: content-box;
-	//If you have 'box-sizing:border-box' the trapezoid doesn't work.
-    }
-}*/
+/*******************************************************/
+/* Scene for Medium Screen. */
 @media only screen and (min-width: 481px) {
-  /* line 192, ../sass/app.scss */
+  /* line 1, ../sass/_responsive.scss */
   .col {
     height: 100%;
     width: 100%;
@@ -256,13 +158,13 @@ div {
     padding: 0;
     border-top: none;
   }
-  /* line 198, ../sass/app.scss */
+  /* line 7, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 203, ../sass/app.scss */
+  /* line 12, ../sass/_responsive.scss */
   .grid {
     margin-top: 0;
     margin-right: 0;
@@ -275,7 +177,7 @@ div {
     border: 1px solid #0000e6;
   }
 
-  /* line 214, ../sass/app.scss */
+  /* line 59, ../sass/app.scss */
   .roof {
     height: 12.5%;
     width: 45%;
@@ -288,7 +190,7 @@ div {
     margin-left: 53.33%;
   }
 
-  /* line 218, ../sass/app.scss */
+  /* line 63, ../sass/app.scss */
   .wall {
     height: 30%;
     width: 40%;
@@ -299,7 +201,7 @@ div {
     margin-bottom: inherit;
     margin-left: 58.33%;
   }
-  /* line 221, ../sass/app.scss */
+  /* line 66, ../sass/app.scss */
   .wall .window {
     height: 60%;
     width: 60%;
@@ -310,7 +212,7 @@ div {
     margin-bottom: inherit;
     margin-left: 3%;
   }
-  /* line 224, ../sass/app.scss */
+  /* line 69, ../sass/app.scss */
   .wall .window table {
     border-collapse: collapse;
     height: 100%;
@@ -319,18 +221,17 @@ div {
     position: absolute;
     z-index: 2;
   }
-  /* line 229, ../sass/app.scss */
+  /* line 74, ../sass/app.scss */
   .wall .window table, .wall .window td {
     border: 1px solid black;
   }
-  /* line 232, ../sass/app.scss */
+  /* line 77, ../sass/app.scss */
   .wall .window .largeWindow {
     visibility: hidden;
   }
 
-  /* line 237, ../sass/app.scss */
-  .car1 {
-    position: absolute;
+  /* line 82, ../sass/app.scss */
+  .carSmall {
     height: 60%;
     width: 60%;
     background: white;
@@ -341,8 +242,8 @@ div {
     margin-left: 3%;
     z-index: 1;
   }
-  /* line 242, ../sass/app.scss */
-  .car1 .carRoof {
+  /* line 86, ../sass/app.scss */
+  .carSmall .carRoof {
     height: 40%;
     width: 55%;
     background: gray;
@@ -352,12 +253,9 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 20%;
-    /*border-width: 2%;
-    border-color: darkgray;
-    border-style: solid;*/
   }
-  /* line 250, ../sass/app.scss */
-  .car1 .carBody {
+  /* line 90, ../sass/app.scss */
+  .carSmall .carBody {
     height: 45%;
     width: 90%;
     background: gray;
@@ -368,8 +266,8 @@ div {
     margin-bottom: inherit;
     margin-left: 5%;
   }
-  /* line 254, ../sass/app.scss */
-  .car1 .carWheelFront {
+  /* line 94, ../sass/app.scss */
+  .carSmall .carWheelFront {
     height: 23.5%;
     width: 16.65%;
     background: pink;
@@ -380,11 +278,11 @@ div {
     margin-bottom: inherit;
     margin-left: 20%;
     border-width: 10%;
-    border-color: darkgray;
     border-style: solid;
+    border-color: darkgray;
   }
-  /* line 261, ../sass/app.scss */
-  .car1 .carWheelRear {
+  /* line 99, ../sass/app.scss */
+  .carSmall .carWheelRear {
     height: 23.5%;
     width: 16.65%;
     background: pink;
@@ -395,11 +293,11 @@ div {
     margin-bottom: inherit;
     margin-left: 65%;
     border-width: 10%;
-    border-color: darkgray;
     border-style: solid;
+    border-color: darkgray;
   }
 
-  /* line 269, ../sass/app.scss */
+  /* line 105, ../sass/app.scss */
   .door {
     height: 90%;
     width: 30%;
@@ -409,29 +307,8 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 65%;
-    /*.doorSignHang{
-        position: absolute;
-        @include margins(40%, 0, 0, 20%);  
-        -ms-transform: rotate(-20deg); /* IE 9 */
-    /*    transform: rotate(-20deg);
-        #doorSignHang:after{
-            @include box(0, 0, transparent, absolute);
-            content:"";
-            @include margins(1%, 0, 0, 1%);  
-        border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 15px solid white;
-        }
-        #doorSignHang:before {
-            @include box(0px, 0px,transparent, absolute);
-            content:"";
-            border-left: 13px solid transparent;
-            border-right: 13px solid transparent;
-            border-bottom: 16px solid blue;
-        }
-}*/
   }
-  /* line 272, ../sass/app.scss */
+  /* line 108, ../sass/app.scss */
   .door .doorHandle {
     height: 10%;
     width: 10%;
@@ -444,7 +321,7 @@ div {
     margin-left: 5%;
   }
 
-  /* line 299, ../sass/app.scss */
+  /* line 114, ../sass/app.scss */
   .doorSign {
     height: 7%;
     width: 50%;
@@ -454,13 +331,13 @@ div {
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 20%;
-    -ms-transform: rotate(-20deg);
+    -ms-transform: skewX(0deg) rotate(-20deg);
     /* IE 9 */
-    -webkit-transform: rotate(-20deg);
+    -webkit-transform: skewX(0deg) rotate(-20deg);
     /* Safari */
-    transform: rotate(-20deg);
+    transform: skewX(0deg) rotate(-20deg);
   }
-  /* line 305, ../sass/app.scss */
+  /* line 118, ../sass/app.scss */
   .doorSign p {
     font-size: 60%;
     font-family: sans-serif;
@@ -468,8 +345,10 @@ div {
     margin-top: 5%;
   }
 }
+/*******************************************************/
+/* Scene for Large Screen. */
 @media only screen and (min-width: 979px) {
-  /* line 316, ../sass/app.scss */
+  /* line 1, ../sass/_responsive.scss */
   .col {
     height: 100%;
     width: 100%;
@@ -483,13 +362,13 @@ div {
     padding: 0;
     border-top: none;
   }
-  /* line 322, ../sass/app.scss */
+  /* line 7, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 327, ../sass/app.scss */
+  /* line 12, ../sass/_responsive.scss */
   .grid {
     margin-top: 0;
     margin-right: 0;
@@ -502,7 +381,7 @@ div {
     border: 1px solid #0000e6;
   }
 
-  /* line 341, ../sass/app.scss */
+  /* line 131, ../sass/app.scss */
   .john {
     height: 35%;
     width: 20%;
@@ -513,7 +392,7 @@ div {
     margin-bottom: inherit;
     margin-left: 2%;
   }
-  /* line 344, ../sass/app.scss */
+  /* line 134, ../sass/app.scss */
   .john .johnFace {
     height: 30%;
     width: 45%;
@@ -523,35 +402,33 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 30%;
-    -ms-transform: skewY(5deg);
+    -ms-transform: skewX(8deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewY(5deg);
+    -webkit-transform: skewX(8deg) rotate(0deg);
     /* Safari */
-    transform: skewX(8deg);
-    /* Standard syntax */
+    transform: skewX(8deg) rotate(0deg);
   }
-  /* line 351, ../sass/app.scss */
+  /* line 139, ../sass/app.scss */
   .john .johnHair {
     height: 13%;
-    width: 45%;
+    width: 50%;
     background: black;
     position: absolute;
-    border-radius: 0 0 180% 180%;
-    margin-top: 0;
+    border-radius: 50% 180% 180% 180%;
+    margin-top: -2%;
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 26%;
-    -ms-transform: skewY(5deg);
+    -ms-transform: skewX(8deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewY(5deg);
+    -webkit-transform: skewX(8deg) rotate(0deg);
     /* Safari */
-    transform: skewX(8deg);
-    /* Standard syntax */
+    transform: skewX(8deg) rotate(0deg);
   }
-  /* line 358, ../sass/app.scss */
+  /* line 144, ../sass/app.scss */
   .john .johnHairFront {
     height: 13%;
-    width: 45%;
+    width: 40%;
     background: black;
     position: absolute;
     border-radius: 80%;
@@ -559,14 +436,13 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 46%;
-    -ms-transform: skewY(5deg);
+    -ms-transform: skewY(15deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewY(5deg);
+    -webkit-transform: skewY(15deg) rotate(0deg);
     /* Safari */
-    transform: skewX(20deg);
-    /* Standard syntax */
+    transform: skewY(15deg) rotate(0deg);
   }
-  /* line 365, ../sass/app.scss */
+  /* line 149, ../sass/app.scss */
   .john .johnEar {
     height: 7%;
     width: 10%;
@@ -577,14 +453,13 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 25%;
-    -ms-transform: skewX(5deg);
+    -ms-transform: skewX(15deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewX(5deg);
+    -webkit-transform: skewX(15deg) rotate(0deg);
     /* Safari */
-    transform: skewX(15deg);
-    /* Standard syntax */
+    transform: skewX(15deg) rotate(0deg);
   }
-  /* line 372, ../sass/app.scss */
+  /* line 154, ../sass/app.scss */
   .john .johnEyeRight {
     height: 6%;
     width: 10%;
@@ -595,11 +470,11 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 58%;
-    border-width: 8px;
-    border-color: white;
+    border-width: 7px;
     border-style: solid;
+    border-color: white;
   }
-  /* line 379, ../sass/app.scss */
+  /* line 159, ../sass/app.scss */
   .john .johnEyeLeft {
     height: 6%;
     width: 10%;
@@ -610,11 +485,11 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 68%;
-    border-width: 8px;
-    border-color: white;
+    border-width: 7px;
     border-style: solid;
+    border-color: white;
   }
-  /* line 386, ../sass/app.scss */
+  /* line 164, ../sass/app.scss */
   .john .johnNose {
     height: 4%;
     width: 12%;
@@ -625,14 +500,13 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 68%;
-    -ms-transform: skewX(5deg);
+    -ms-transform: skewX(19deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewX(5deg);
+    -webkit-transform: skewX(19deg) rotate(0deg);
     /* Safari */
-    transform: skewX(19deg);
-    /* Standard syntax */
+    transform: skewX(19deg) rotate(0deg);
   }
-  /* line 393, ../sass/app.scss */
+  /* line 169, ../sass/app.scss */
   .john .johnMouth {
     height: 2%;
     width: 10%;
@@ -643,15 +517,13 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 67%;
-    -ms-transform: skewX(5deg);
+    -ms-transform: skewX(30deg) rotate(15deg);
     /* IE 9 */
-    -webkit-transform: skewX(5deg);
+    -webkit-transform: skewX(30deg) rotate(15deg);
     /* Safari */
-    transform: skewX(30deg);
-    /* Standard syntax */
-    transform: rotate(15deg);
+    transform: skewX(30deg) rotate(15deg);
   }
-  /* line 402, ../sass/app.scss */
+  /* line 174, ../sass/app.scss */
   .john .johnBody {
     height: 30%;
     width: 40%;
@@ -661,14 +533,13 @@ div {
     margin-right: inherit;
     margin-bottom: inherit;
     margin-left: 34%;
-    -ms-transform: skewY(5deg);
+    -ms-transform: skewY(8deg) rotate(0deg);
     /* IE 9 */
-    -webkit-transform: skewY(5deg);
+    -webkit-transform: skewY(8deg) rotate(0deg);
     /* Safari */
-    transform: skewY(8deg);
-    /* Standard syntax */
+    transform: skewY(8deg) rotate(0deg);
   }
-  /* line 409, ../sass/app.scss */
+  /* line 179, ../sass/app.scss */
   .john .johnHand {
     /*@include box(20%, 10%, orange, absolute);
     @include margins(68%, inherit, inherit, 30%);
@@ -685,7 +556,7 @@ div {
     transform: skewX(50deg);
     transform: rotate(-45deg);
   }
-  /* line 421, ../sass/app.scss */
+  /* line 191, ../sass/app.scss */
   .john .johnHandWrist {
     height: 7%;
     width: 40%;
@@ -699,7 +570,7 @@ div {
     transform: skewX(50deg);
     transform: rotate(185deg);
   }
-  /* line 427, ../sass/app.scss */
+  /* line 197, ../sass/app.scss */
   .john .johnShoppingBagHang {
     height: 10%;
     width: 15%;
@@ -715,7 +586,7 @@ div {
     border-right: 3px solid black;
     transform: skewX(10deg);
   }
-  /* line 436, ../sass/app.scss */
+  /* line 206, ../sass/app.scss */
   .john .johnShoppingBag {
     height: 30%;
     width: 45%;
@@ -728,7 +599,7 @@ div {
     border-bottom: 8px outset brown;
     border-left: 8px solid brown;
   }
-  /* line 442, ../sass/app.scss */
+  /* line 212, ../sass/app.scss */
   .john .johnLeg {
     height: 30%;
     width: 25%;
@@ -740,7 +611,7 @@ div {
     margin-left: 42%;
     transform: skewX(15deg);
   }
-  /* line 448, ../sass/app.scss */
+  /* line 218, ../sass/app.scss */
   .john .johnShoeRight {
     height: 4%;
     width: 20%;
@@ -753,7 +624,7 @@ div {
     margin-left: 47%;
     border-right: 4px solid white;
   }
-  /* line 453, ../sass/app.scss */
+  /* line 223, ../sass/app.scss */
   .john .johnShoeLeft {
     height: 4%;
     width: 20%;
@@ -781,7 +652,7 @@ div {
                   <div class="johnFoot";
               </div>
       */
-  /* line 475, ../sass/app.scss */
+  /* line 245, ../sass/app.scss */
   .roof {
     height: 15%;
     width: 55%;
@@ -794,7 +665,7 @@ div {
     margin-left: 45.33%;
   }
 
-  /* line 479, ../sass/app.scss */
+  /* line 249, ../sass/app.scss */
   .wall {
     height: 35%;
     width: 50%;
@@ -805,7 +676,7 @@ div {
     margin-bottom: inherit;
     margin-left: 50%;
   }
-  /* line 482, ../sass/app.scss */
+  /* line 252, ../sass/app.scss */
   .wall .window {
     height: 60%;
     width: 60%;
@@ -816,7 +687,7 @@ div {
     margin-bottom: inherit;
     margin-left: 3%;
   }
-  /* line 485, ../sass/app.scss */
+  /* line 255, ../sass/app.scss */
   .wall .window table {
     border-collapse: collapse;
     height: 100%;
@@ -825,25 +696,25 @@ div {
     position: absolute;
     z-index: 2;
   }
-  /* line 490, ../sass/app.scss */
+  /* line 260, ../sass/app.scss */
   .wall .window table, .wall .window td, .wall .window th {
     border: 1px solid black;
   }
-  /* line 493, ../sass/app.scss */
+  /* line 263, ../sass/app.scss */
   .wall .window .smallWindow {
     visibility: hidden;
   }
-  /* line 496, ../sass/app.scss */
+  /* line 266, ../sass/app.scss */
   .wall .window .largeWindow {
     visibility: visible;
   }
 
-  /* line 501, ../sass/app.scss */
+  /* line 271, ../sass/app.scss */
   .car1 {
     visibility: hidden;
   }
 
-  /* line 504, ../sass/app.scss */
+  /* line 274, ../sass/app.scss */
   .car2 {
     position: absolute;
     height: 60%;
@@ -856,7 +727,7 @@ div {
     margin-left: 3%;
     z-index: 1;
   }
-  /* line 509, ../sass/app.scss */
+  /* line 279, ../sass/app.scss */
   .car2 .car2Body {
     height: 20%;
     width: 70%;
@@ -868,7 +739,7 @@ div {
     margin-left: 20%;
     border: 2px solid blue;
   }
-  /* line 514, ../sass/app.scss */
+  /* line 284, ../sass/app.scss */
   .car2 .car2Storage {
     height: 20%;
     width: 25%;
@@ -886,7 +757,7 @@ div {
     transform: skewY(25deg);
     /* Standard syntax */
   }
-  /* line 522, ../sass/app.scss */
+  /* line 292, ../sass/app.scss */
   .car2 .car2Bonet {
     height: 15%;
     width: 20%;
@@ -904,7 +775,7 @@ div {
     transform: skewX(65deg);
     /* Standard syntax */
   }
-  /* line 530, ../sass/app.scss */
+  /* line 300, ../sass/app.scss */
   .car2 .car2BackGlass {
     height: 16%;
     width: 22%;
@@ -922,7 +793,7 @@ div {
     transform: rotate(25deg);
     /* Standard syntax */
   }
-  /* line 538, ../sass/app.scss */
+  /* line 308, ../sass/app.scss */
   .car2 .car2Roof {
     height: 13%;
     width: 25%;
@@ -940,7 +811,7 @@ div {
     transform: skewX(65deg);
     /* Standard syntax */
   }
-  /* line 546, ../sass/app.scss */
+  /* line 316, ../sass/app.scss */
   .car2 .car2Window {
     height: 16%;
     width: 0%;
@@ -958,7 +829,7 @@ div {
     transform: skewX(65deg);
     /* Standard syntax */
   }
-  /* line 554, ../sass/app.scss */
+  /* line 324, ../sass/app.scss */
   .car2 .car2WheelFront {
     height: 23.5%;
     width: 16.65%;
@@ -973,7 +844,7 @@ div {
     border-color: blue;
     border-style: solid;
   }
-  /* line 561, ../sass/app.scss */
+  /* line 331, ../sass/app.scss */
   .car2 .car2WheelRear {
     height: 23.5%;
     width: 16.65%;
@@ -989,7 +860,7 @@ div {
     border-style: solid;
   }
 
-  /* line 569, ../sass/app.scss */
+  /* line 339, ../sass/app.scss */
   .door {
     height: 90%;
     width: 30%;
@@ -1021,7 +892,7 @@ div {
         }
 }*/
   }
-  /* line 572, ../sass/app.scss */
+  /* line 342, ../sass/app.scss */
   .door .doorHandle {
     height: 10%;
     width: 10%;
@@ -1034,7 +905,7 @@ div {
     margin-left: 5%;
   }
 
-  /* line 599, ../sass/app.scss */
+  /* line 369, ../sass/app.scss */
   .doorSign {
     height: 7%;
     width: 50%;
@@ -1050,7 +921,7 @@ div {
     /* Safari */
     transform: rotate(-20deg);
   }
-  /* line 605, ../sass/app.scss */
+  /* line 375, ../sass/app.scss */
   .doorSign p {
     font-size: 60%;
     font-family: sans-serif;

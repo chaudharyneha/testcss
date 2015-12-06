@@ -1,3 +1,19 @@
+/* browser support */
+@mixin boxSizing($type){
+    -webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+@mixin transformX($skew, $rotate){
+        -ms-transform: skewX($skew+deg) rotate($rotate+deg); /* IE 9 */
+        -webkit-transform: skewX($skew+deg) rotate($rotate+deg); /* Safari */
+        transform: skewX($skew+deg) rotate($rotate+deg);
+}
+@mixin transformY($skew, $rotate){
+        -ms-transform: skewY($skew+deg) rotate($rotate+deg); /* IE 9 */
+        -webkit-transform: skewY($skew+deg) rotate($rotate+deg); /* Safari */
+        transform: skewY($skew+deg) rotate($rotate+deg);
+}
 /* Create a rectangular shape*/
 @mixin box($height: auto, $width: auto, $color: auto, $position: auto){
     height: $height;
@@ -9,6 +25,12 @@
 @mixin shapeCircle($height: auto, $width: auto, $color: auto, $radius: auto, $position: auto){
     @include box($height, $width, $color, $position);
     border-radius: $radius;
+}
+/* Set border properties */
+@mixin border($width, $style,$color){
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
 }
 /* Set the margin top, right, bottom, left*/
 @mixin margins($top: auto, $right: auto, $bottom: auto, $left: auto){
