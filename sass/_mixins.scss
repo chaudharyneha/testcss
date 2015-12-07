@@ -29,7 +29,7 @@
     position: $position;
 }
 /* Create a circle shape */
-@mixin shapeCircle($height: auto, $width: auto, $color: auto, $radius: auto, $position: auto){
+@mixin shapeCircle($height: auto, $width: auto, $color: auto, $radius: auto, $position: inherit){
     @include box($height, $width, $color, $position);
     border-radius: $radius;
 }
