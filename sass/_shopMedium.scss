@@ -1,0 +1,43 @@
+.roof{
+        @include shapeCircle(12.50%, 45%, transparent, 130% 10% 0 0,absolute);
+        @include margins(37.66%, inherit, inherit, 53.33%);
+        background: repeating-linear-gradient(to right, blue 20%, gray 30%);
+    }
+    .wall{
+        @include box (30%, 40%, blue,absolute);
+        @include margins(50%, inherit, inherit, 58.33%);
+    .window{
+        @include box (60%, 60%, white,absolute);
+        @include margins(10%, inherit, inherit, 3%);
+        table {
+            border-collapse: collapse;
+            @include box (100%, 100%, transparent,absolute);
+            z-index: 2;
+            }
+        table, td {
+            border: 1px solid black;
+        }
+        .largeWindow{
+            visibility: hidden;
+        }
+    }
+}
+.door{
+    @include box(90%, 30%, #fff, absolute);
+    @include margins(7%, inherit, inherit, 65%);
+    .doorHandle{
+        @include shapeCircle(10%, 10%, #106088, 90%,relative);
+        @include margins(100%, 0, 0, 5%);
+    }
+}
+.doorSign{
+    @include box(7%, 50%, blue,absolute);
+    @include margins(65%, 0, 0, 20%);
+    @include transformX(0, -20);
+    & p{
+        font-size: 60%;
+        font-family: sans-serif;
+        color: white;
+        margin-top: 5%;
+    }
+}

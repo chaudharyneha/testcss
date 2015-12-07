@@ -1,5 +1,5 @@
 
-/* browser support */
+// browser support 
 @mixin boxSizing($type){
     -webkit-box-sizing: $type;
 	-moz-box-sizing: $type;
@@ -15,7 +15,13 @@
         -webkit-transform: skewY($skew+deg) rotate($rotate+deg); /* Safari */
         transform: skewY($skew+deg) rotate($rotate+deg);
 }
-/* Create a rectangular shape*/
+@mixin browsercompatibility($inc, $time, $speed){
+    -webkit-transition: $inc $time $speed;
+    -moz-transition: $inc $time $speed;
+    -o-transition: $inc $time $speed;
+    transition: $inc $time $speed;
+}
+// Create a rectangular shape
 @mixin box($height: auto, $width: auto, $color: auto, $position: auto){
     height: $height;
     width: $width;
@@ -27,22 +33,16 @@
     @include box($height, $width, $color, $position);
     border-radius: $radius;
 }
-/* Set border properties  */
+// Set border properties  
 @mixin border($width, $style,$color){
     border-width: $width;
     border-style: $style;
     border-color: $color;
 }
-/* Set the margin top, right, bottom, left*/
+// Set the margin top, right, bottom, left
 @mixin margins($top: auto, $right: auto, $bottom: auto, $left: auto){
     margin-top: $top;
     margin-right: $right;
     margin-bottom: $bottom;
     margin-left: $left;
-}
-@mixin browsercompatibility($inc, $time, $speed){
-    -webkit-transition: $inc $time $speed;
-    -moz-transition: $inc $time $speed;
-    -o-transition: $inc $time $speed;
-    transition: $inc $time $speed;
 }

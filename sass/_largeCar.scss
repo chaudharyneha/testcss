@@ -1,0 +1,54 @@
+$wheelColor: #5e4545;  // Variables
+$silver: #C0C0C0;
+$red: #ff0000;
+.car2{
+    position: absolute;
+    @include box (60%, 60%, white,absolute);
+    @include margins(10%, inherit, inherit, 3%);
+    z-index: 1;
+    .car2Body{
+        @include box(20%, 75%, $red, absolute);
+        @include margins(45%, inherit, inherit, 25%);
+        border: 2px solid $silver;
+    }
+    .car2Storage{
+        @include box(20%, 25%, $red, absolute);
+        @include margins(40%, inherit, inherit, 1%);
+        border: 2px solid $silver;
+        @include transformY(25,0);
+    }
+    .car2Bonet{
+        @include box(15%, 20%, $red, absolute);
+        @include margins(35%, inherit, inherit, 12%);
+        border: 2px solid $silver;
+        @include transformX(65,0);
+    }
+    .car2BackGlass{
+        @include box(16%, 22%, $red, absolute);
+        @include margins(30%, inherit, inherit, 23%);
+        @include transformY(0, 25);
+        border: 2px solid $silver;
+    }
+    .car2Roof{
+        @include box(13%, 27%, $red, absolute);
+        @include margins(26%, inherit, inherit, 36%);
+        @include transformX(65,0);
+        border: 2px solid $silver;
+    }
+    .car2Window{
+        @include box(20%, 10%, $red, absolute);
+        @include margins(33%, inherit, inherit, 77%);
+        @include transformX(65,10);
+        border: 2px solid $silver;
+    }
+    .car2WheelFront{
+        @include shapeCircle(23.5%, 16.65%, $silver, 80%,absolute);
+        @include margins(50%, inherit, inherit, 65%);
+        border: 8px solid $wheelColor;
+    }
+    .car2WheelRear{
+        @include shapeCircle(23.5%, 16.65%, $silver, 80%,absolute);
+        @include margins(50%, inherit, inherit, 35%);
+        border: 8px solid $wheelColor;
+    }
+}

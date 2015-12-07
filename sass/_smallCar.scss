@@ -1,0 +1,23 @@
+.carSmall{
+    @include box (60%, 60%, white,absolute);
+    @include margins(10%, inherit, inherit, 3%);
+    z-index: 1;
+    .carRoof{
+        @include shapeCircle(40%, 55%, gray, 130% 60% 0 0,absolute);
+        @include margins(15%, inherit, inherit, 20%);
+    }
+    .carBody{
+        @include shapeCircle(45%, 90%, gray, 60% 60% 0 0,absolute);
+        @include margins(30%, inherit, inherit, 5%);
+    }
+    .carWheelFront{
+        @include shapeCircle(23.5%, 16.65%, pink, 80%,absolute);
+        @include margins(52%, inherit, inherit, 20%);
+        @include border(10%, solid, darkgray);
+    }
+    .carWheelRear{
+        @include shapeCircle(23.5%, 16.65%, pink, 80%,absolute);
+        @include margins(52%, inherit, inherit, 65%);
+        @include border(10%, solid, darkgray);
+    }
+}

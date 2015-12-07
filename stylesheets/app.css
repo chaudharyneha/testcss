@@ -1,43 +1,39 @@
 /* 
-* Sociomantic HTML/CSS Task
-* Completed by Neha Chaudhary Seth
+*  HTML/CSS Task
 */
-/* browser support */
-/* Create a rectangular shape*/
 /* Create a circle shape */
-/* Set border properties  */
-/* Set the margin top, right, bottom, left*/
-/* line 8, ../sass/app.scss */
+/* line 6, ../sass/app.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 9, ../sass/app.scss */
+/* line 7, ../sass/app.scss */
 body {
   font-size: 16px;
   font-family: Helvetica, Arial, Sans-Serif;
 }
 
-/* line 14, ../sass/app.scss */
+/* line 12, ../sass/app.scss */
 .container {
-  @box (100%, 98%, inherit,inherit);
+  height: 0%;
+  width: 98%;
+  background: inherit;
+  position: inherit;
   display: block;
 }
 
-/* line 19, ../sass/app.scss */
+/* line 16, ../sass/app.scss */
 div {
   height: 100%;
   width: 100%;
   background: transparent;
-  position: auto;
+  position: inherit;
   float: left;
   text-align: center;
 }
 
-/*******************************************************/
-/* Scene for small Screen. */
 /* line 1, ../sass/_responsive.scss */
 .col {
   height: 100%;
@@ -50,13 +46,13 @@ div {
   margin-left: 0;
   display: inline-block;
 }
-/* line 8, ../sass/_responsive.scss */
+/* line 5, ../sass/_responsive.scss */
 .col .spacer {
   position: inherit;
   padding-top: 100%;
 }
 
-/* line 13, ../sass/_responsive.scss */
+/* line 10, ../sass/_responsive.scss */
 .grid {
   margin-top: -35%;
   margin-right: 0;
@@ -69,9 +65,7 @@ div {
   border: 1px solid #0000e6;
 }
 
-/* ----------------------------------------------*/
-/* john drawing css made with rectangle and circle with some transform */
-/* line 3, ../sass/_john.scss */
+/* line 1, ../sass/_john.scss */
 .john {
   height: 35%;
   width: 20%;
@@ -82,7 +76,7 @@ div {
   margin-bottom: inherit;
   margin-left: 2%;
 }
-/* line 6, ../sass/_john.scss */
+/* line 4, ../sass/_john.scss */
 .john .johnFace {
   height: 30%;
   width: 45%;
@@ -98,7 +92,7 @@ div {
   /* Safari */
   transform: skewX(8deg) rotate(0deg);
 }
-/* line 11, ../sass/_john.scss */
+/* line 9, ../sass/_john.scss */
 .john .johnHair {
   height: 13%;
   width: 50%;
@@ -115,7 +109,7 @@ div {
   /* Safari */
   transform: skewX(8deg) rotate(0deg);
 }
-/* line 16, ../sass/_john.scss */
+/* line 14, ../sass/_john.scss */
 .john .johnHairFront {
   height: 13%;
   width: 40%;
@@ -132,7 +126,7 @@ div {
   /* Safari */
   transform: skewY(15deg) rotate(0deg);
 }
-/* line 21, ../sass/_john.scss */
+/* line 19, ../sass/_john.scss */
 .john .johnEar {
   height: 7%;
   width: 10%;
@@ -149,7 +143,7 @@ div {
   /* Safari */
   transform: skewX(15deg) rotate(0deg);
 }
-/* line 26, ../sass/_john.scss */
+/* line 24, ../sass/_john.scss */
 .john .johnEyeRight {
   height: 5%;
   width: 9%;
@@ -162,7 +156,7 @@ div {
   margin-left: 58%;
   border: .4em solid white;
 }
-/* line 31, ../sass/_john.scss */
+/* line 29, ../sass/_john.scss */
 .john .johnEyeLeft {
   height: 5%;
   width: 9%;
@@ -175,7 +169,7 @@ div {
   margin-left: 68%;
   border: .4em solid white;
 }
-/* line 36, ../sass/_john.scss */
+/* line 34, ../sass/_john.scss */
 .john .johnNose {
   height: 4%;
   width: 12%;
@@ -192,7 +186,7 @@ div {
   /* Safari */
   transform: skewX(19deg) rotate(0deg);
 }
-/* line 41, ../sass/_john.scss */
+/* line 39, ../sass/_john.scss */
 .john .johnMouth {
   height: 2%;
   width: 10%;
@@ -209,7 +203,7 @@ div {
   /* Safari */
   transform: skewX(30deg) rotate(15deg);
 }
-/* line 46, ../sass/_john.scss */
+/* line 44, ../sass/_john.scss */
 .john .johnBody {
   height: 30%;
   width: 40%;
@@ -225,7 +219,7 @@ div {
   /* Safari */
   transform: skewY(8deg) rotate(0deg);
 }
-/* line 51, ../sass/_john.scss */
+/* line 49, ../sass/_john.scss */
 .john .johnHand {
   height: 7%;
   width: 40%;
@@ -242,7 +236,7 @@ div {
   /* Safari */
   transform: skewX(5deg) rotate(-45deg);
 }
-/* line 56, ../sass/_john.scss */
+/* line 54, ../sass/_john.scss */
 .john .johnHandWrist {
   height: 8%;
   width: 35%;
@@ -259,7 +253,7 @@ div {
   /* Safari */
   transform: skewX(50deg) rotate(185deg);
 }
-/* line 61, ../sass/_john.scss */
+/* line 59, ../sass/_john.scss */
 .john .johnShoppingBagHang {
   height: 10%;
   width: 15%;
@@ -278,7 +272,7 @@ div {
   border-left: 3px solid black;
   border-right: 3px solid black;
 }
-/* line 68, ../sass/_john.scss */
+/* line 66, ../sass/_john.scss */
 .john .johnShoppingBag {
   height: 30%;
   width: 45%;
@@ -291,7 +285,7 @@ div {
   border-bottom: 8px outset brown;
   border-left: 8px solid brown;
 }
-/* line 74, ../sass/_john.scss */
+/* line 72, ../sass/_john.scss */
 .john .johnLeg {
   height: 30%;
   width: 25%;
@@ -307,7 +301,7 @@ div {
   /* Safari */
   transform: skewX(15deg) rotate(0deg);
 }
-/* line 79, ../sass/_john.scss */
+/* line 77, ../sass/_john.scss */
 .john .johnShoeRight {
   height: 4%;
   width: 20%;
@@ -320,7 +314,7 @@ div {
   margin-left: 47%;
   border-right: 4px solid white;
 }
-/* line 84, ../sass/_john.scss */
+/* line 82, ../sass/_john.scss */
 .john .johnShoeLeft {
   height: 4%;
   width: 20%;
@@ -333,7 +327,7 @@ div {
   margin-left: 60%;
 }
 
-/* line 29, ../sass/app.scss */
+/* line 1, ../sass/_shopVerySmall.scss */
 .roof {
   height: 8.33%;
   width: 25%;
@@ -346,7 +340,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 33, ../sass/app.scss */
+/* line 5, ../sass/_shopVerySmall.scss */
 .wall {
   height: 25%;
   width: 25%;
@@ -358,7 +352,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 38, ../sass/app.scss */
+/* line 9, ../sass/_shopVerySmall.scss */
 .door {
   height: 90%;
   width: 40%;
@@ -369,7 +363,7 @@ div {
   margin-bottom: inherit;
   margin-left: 33.33%;
 }
-/* line 41, ../sass/app.scss */
+/* line 12, ../sass/_shopVerySmall.scss */
 .door .doorHandle {
   height: 10%;
   width: 10%;
@@ -382,7 +376,7 @@ div {
   margin-left: 5%;
 }
 
-/* line 46, ../sass/app.scss */
+/* line 17, ../sass/_shopVerySmall.scss */
 .doorSign {
   height: 7%;
   width: 50%;
@@ -396,15 +390,13 @@ div {
   -webkit-transform: 0;
   transform: 0;
 }
-/* line 50, ../sass/app.scss */
+/* line 21, ../sass/_shopVerySmall.scss */
 .doorSign p {
   font-size: 60%;
   color: white;
   margin-top: 10%;
 }
 
-/*******************************************************/
-/* Scene for Medium Screen. */
 @media only screen and (min-width: 481px) {
   /* line 1, ../sass/_responsive.scss */
   .col {
@@ -418,13 +410,13 @@ div {
     margin-left: 0;
     display: inline-block;
   }
-  /* line 8, ../sass/_responsive.scss */
+  /* line 5, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 13, ../sass/_responsive.scss */
+  /* line 10, ../sass/_responsive.scss */
   .grid {
     margin-top: -35%;
     margin-right: 0;
@@ -437,9 +429,7 @@ div {
     border: 1px solid #0000e6;
   }
 
-  /* ----------------------------------------------*/
-  /* john drawing css made with rectangle and circle with some transform */
-  /* line 3, ../sass/_john.scss */
+  /* line 1, ../sass/_john.scss */
   .john {
     height: 35%;
     width: 20%;
@@ -450,7 +440,7 @@ div {
     margin-bottom: inherit;
     margin-left: 2%;
   }
-  /* line 6, ../sass/_john.scss */
+  /* line 4, ../sass/_john.scss */
   .john .johnFace {
     height: 30%;
     width: 45%;
@@ -466,7 +456,7 @@ div {
     /* Safari */
     transform: skewX(8deg) rotate(0deg);
   }
-  /* line 11, ../sass/_john.scss */
+  /* line 9, ../sass/_john.scss */
   .john .johnHair {
     height: 13%;
     width: 50%;
@@ -483,7 +473,7 @@ div {
     /* Safari */
     transform: skewX(8deg) rotate(0deg);
   }
-  /* line 16, ../sass/_john.scss */
+  /* line 14, ../sass/_john.scss */
   .john .johnHairFront {
     height: 13%;
     width: 40%;
@@ -500,7 +490,7 @@ div {
     /* Safari */
     transform: skewY(15deg) rotate(0deg);
   }
-  /* line 21, ../sass/_john.scss */
+  /* line 19, ../sass/_john.scss */
   .john .johnEar {
     height: 7%;
     width: 10%;
@@ -517,7 +507,7 @@ div {
     /* Safari */
     transform: skewX(15deg) rotate(0deg);
   }
-  /* line 26, ../sass/_john.scss */
+  /* line 24, ../sass/_john.scss */
   .john .johnEyeRight {
     height: 5%;
     width: 9%;
@@ -530,7 +520,7 @@ div {
     margin-left: 58%;
     border: .4em solid white;
   }
-  /* line 31, ../sass/_john.scss */
+  /* line 29, ../sass/_john.scss */
   .john .johnEyeLeft {
     height: 5%;
     width: 9%;
@@ -543,7 +533,7 @@ div {
     margin-left: 68%;
     border: .4em solid white;
   }
-  /* line 36, ../sass/_john.scss */
+  /* line 34, ../sass/_john.scss */
   .john .johnNose {
     height: 4%;
     width: 12%;
@@ -560,7 +550,7 @@ div {
     /* Safari */
     transform: skewX(19deg) rotate(0deg);
   }
-  /* line 41, ../sass/_john.scss */
+  /* line 39, ../sass/_john.scss */
   .john .johnMouth {
     height: 2%;
     width: 10%;
@@ -577,7 +567,7 @@ div {
     /* Safari */
     transform: skewX(30deg) rotate(15deg);
   }
-  /* line 46, ../sass/_john.scss */
+  /* line 44, ../sass/_john.scss */
   .john .johnBody {
     height: 30%;
     width: 40%;
@@ -593,7 +583,7 @@ div {
     /* Safari */
     transform: skewY(8deg) rotate(0deg);
   }
-  /* line 51, ../sass/_john.scss */
+  /* line 49, ../sass/_john.scss */
   .john .johnHand {
     height: 7%;
     width: 40%;
@@ -610,7 +600,7 @@ div {
     /* Safari */
     transform: skewX(5deg) rotate(-45deg);
   }
-  /* line 56, ../sass/_john.scss */
+  /* line 54, ../sass/_john.scss */
   .john .johnHandWrist {
     height: 8%;
     width: 35%;
@@ -627,7 +617,7 @@ div {
     /* Safari */
     transform: skewX(50deg) rotate(185deg);
   }
-  /* line 61, ../sass/_john.scss */
+  /* line 59, ../sass/_john.scss */
   .john .johnShoppingBagHang {
     height: 10%;
     width: 15%;
@@ -646,7 +636,7 @@ div {
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
-  /* line 68, ../sass/_john.scss */
+  /* line 66, ../sass/_john.scss */
   .john .johnShoppingBag {
     height: 30%;
     width: 45%;
@@ -659,7 +649,7 @@ div {
     border-bottom: 8px outset brown;
     border-left: 8px solid brown;
   }
-  /* line 74, ../sass/_john.scss */
+  /* line 72, ../sass/_john.scss */
   .john .johnLeg {
     height: 30%;
     width: 25%;
@@ -675,7 +665,7 @@ div {
     /* Safari */
     transform: skewX(15deg) rotate(0deg);
   }
-  /* line 79, ../sass/_john.scss */
+  /* line 77, ../sass/_john.scss */
   .john .johnShoeRight {
     height: 4%;
     width: 20%;
@@ -688,7 +678,7 @@ div {
     margin-left: 47%;
     border-right: 4px solid white;
   }
-  /* line 84, ../sass/_john.scss */
+  /* line 82, ../sass/_john.scss */
   .john .johnShoeLeft {
     height: 4%;
     width: 20%;
@@ -701,8 +691,7 @@ div {
     margin-left: 60%;
   }
 
-  /* Shop with small car*/
-  /* line 62, ../sass/app.scss */
+  /* line 1, ../sass/_shopMedium.scss */
   .roof {
     height: 12.5%;
     width: 45%;
@@ -716,7 +705,7 @@ div {
     background: repeating-linear-gradient(to right, blue 20%, gray 30%);
   }
 
-  /* line 67, ../sass/app.scss */
+  /* line 6, ../sass/_shopMedium.scss */
   .wall {
     height: 30%;
     width: 40%;
@@ -727,7 +716,7 @@ div {
     margin-bottom: inherit;
     margin-left: 58.33%;
   }
-  /* line 70, ../sass/app.scss */
+  /* line 9, ../sass/_shopMedium.scss */
   .wall .window {
     height: 60%;
     width: 60%;
@@ -738,7 +727,7 @@ div {
     margin-bottom: inherit;
     margin-left: 3%;
   }
-  /* line 73, ../sass/app.scss */
+  /* line 12, ../sass/_shopMedium.scss */
   .wall .window table {
     border-collapse: collapse;
     height: 100%;
@@ -747,83 +736,16 @@ div {
     position: absolute;
     z-index: 2;
   }
-  /* line 78, ../sass/app.scss */
+  /* line 17, ../sass/_shopMedium.scss */
   .wall .window table, .wall .window td {
     border: 1px solid black;
   }
-  /* line 81, ../sass/app.scss */
+  /* line 20, ../sass/_shopMedium.scss */
   .wall .window .largeWindow {
     visibility: hidden;
   }
 
-  /* line 86, ../sass/app.scss */
-  .carSmall {
-    height: 60%;
-    width: 60%;
-    background: white;
-    position: absolute;
-    margin-top: 10%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 3%;
-    z-index: 1;
-  }
-  /* line 90, ../sass/app.scss */
-  .carSmall .carRoof {
-    height: 40%;
-    width: 55%;
-    background: gray;
-    position: absolute;
-    border-radius: 130% 60% 0 0;
-    margin-top: 15%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 20%;
-  }
-  /* line 94, ../sass/app.scss */
-  .carSmall .carBody {
-    height: 45%;
-    width: 90%;
-    background: gray;
-    position: absolute;
-    border-radius: 60% 60% 0 0;
-    margin-top: 30%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 5%;
-  }
-  /* line 98, ../sass/app.scss */
-  .carSmall .carWheelFront {
-    height: 23.5%;
-    width: 16.65%;
-    background: pink;
-    position: absolute;
-    border-radius: 80%;
-    margin-top: 52%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 20%;
-    border-width: 10%;
-    border-style: solid;
-    border-color: darkgray;
-  }
-  /* line 103, ../sass/app.scss */
-  .carSmall .carWheelRear {
-    height: 23.5%;
-    width: 16.65%;
-    background: pink;
-    position: absolute;
-    border-radius: 80%;
-    margin-top: 52%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 65%;
-    border-width: 10%;
-    border-style: solid;
-    border-color: darkgray;
-  }
-
-  /* line 109, ../sass/app.scss */
+  /* line 25, ../sass/_shopMedium.scss */
   .door {
     height: 90%;
     width: 30%;
@@ -834,7 +756,7 @@ div {
     margin-bottom: inherit;
     margin-left: 65%;
   }
-  /* line 112, ../sass/app.scss */
+  /* line 28, ../sass/_shopMedium.scss */
   .door .doorHandle {
     height: 10%;
     width: 10%;
@@ -847,7 +769,7 @@ div {
     margin-left: 5%;
   }
 
-  /* line 118, ../sass/app.scss */
+  /* line 33, ../sass/_shopMedium.scss */
   .doorSign {
     height: 7%;
     width: 50%;
@@ -863,16 +785,81 @@ div {
     /* Safari */
     transform: skewX(0deg) rotate(-20deg);
   }
-  /* line 122, ../sass/app.scss */
+  /* line 37, ../sass/_shopMedium.scss */
   .doorSign p {
     font-size: 60%;
     font-family: sans-serif;
     color: white;
     margin-top: 5%;
   }
+
+  /* line 1, ../sass/_smallCar.scss */
+  .carSmall {
+    height: 60%;
+    width: 60%;
+    background: white;
+    position: absolute;
+    margin-top: 10%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 3%;
+    z-index: 1;
+  }
+  /* line 5, ../sass/_smallCar.scss */
+  .carSmall .carRoof {
+    height: 40%;
+    width: 55%;
+    background: gray;
+    position: absolute;
+    border-radius: 130% 60% 0 0;
+    margin-top: 15%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 20%;
+  }
+  /* line 9, ../sass/_smallCar.scss */
+  .carSmall .carBody {
+    height: 45%;
+    width: 90%;
+    background: gray;
+    position: absolute;
+    border-radius: 60% 60% 0 0;
+    margin-top: 30%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 5%;
+  }
+  /* line 13, ../sass/_smallCar.scss */
+  .carSmall .carWheelFront {
+    height: 23.5%;
+    width: 16.65%;
+    background: pink;
+    position: absolute;
+    border-radius: 80%;
+    margin-top: 52%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 20%;
+    border-width: 10%;
+    border-style: solid;
+    border-color: darkgray;
+  }
+  /* line 18, ../sass/_smallCar.scss */
+  .carSmall .carWheelRear {
+    height: 23.5%;
+    width: 16.65%;
+    background: pink;
+    position: absolute;
+    border-radius: 80%;
+    margin-top: 52%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 65%;
+    border-width: 10%;
+    border-style: solid;
+    border-color: darkgray;
+  }
 }
-/*******************************************************/
-/* Shop Large */
 @media only screen and (min-width: 979px) {
   /* line 1, ../sass/_responsive.scss */
   .col {
@@ -886,13 +873,13 @@ div {
     margin-left: 0;
     display: inline-block;
   }
-  /* line 8, ../sass/_responsive.scss */
+  /* line 5, ../sass/_responsive.scss */
   .col .spacer {
     position: inherit;
     padding-top: 100%;
   }
 
-  /* line 13, ../sass/_responsive.scss */
+  /* line 10, ../sass/_responsive.scss */
   .grid {
     margin-top: -35%;
     margin-right: 0;
@@ -905,9 +892,7 @@ div {
     border: 1px solid #0000e6;
   }
 
-  /* ----------------------------------------------*/
-  /* john drawing css made with rectangle and circle with some transform */
-  /* line 3, ../sass/_john.scss */
+  /* line 1, ../sass/_john.scss */
   .john {
     height: 35%;
     width: 20%;
@@ -918,7 +903,7 @@ div {
     margin-bottom: inherit;
     margin-left: 2%;
   }
-  /* line 6, ../sass/_john.scss */
+  /* line 4, ../sass/_john.scss */
   .john .johnFace {
     height: 30%;
     width: 45%;
@@ -934,7 +919,7 @@ div {
     /* Safari */
     transform: skewX(8deg) rotate(0deg);
   }
-  /* line 11, ../sass/_john.scss */
+  /* line 9, ../sass/_john.scss */
   .john .johnHair {
     height: 13%;
     width: 50%;
@@ -951,7 +936,7 @@ div {
     /* Safari */
     transform: skewX(8deg) rotate(0deg);
   }
-  /* line 16, ../sass/_john.scss */
+  /* line 14, ../sass/_john.scss */
   .john .johnHairFront {
     height: 13%;
     width: 40%;
@@ -968,7 +953,7 @@ div {
     /* Safari */
     transform: skewY(15deg) rotate(0deg);
   }
-  /* line 21, ../sass/_john.scss */
+  /* line 19, ../sass/_john.scss */
   .john .johnEar {
     height: 7%;
     width: 10%;
@@ -985,7 +970,7 @@ div {
     /* Safari */
     transform: skewX(15deg) rotate(0deg);
   }
-  /* line 26, ../sass/_john.scss */
+  /* line 24, ../sass/_john.scss */
   .john .johnEyeRight {
     height: 5%;
     width: 9%;
@@ -998,7 +983,7 @@ div {
     margin-left: 58%;
     border: .4em solid white;
   }
-  /* line 31, ../sass/_john.scss */
+  /* line 29, ../sass/_john.scss */
   .john .johnEyeLeft {
     height: 5%;
     width: 9%;
@@ -1011,7 +996,7 @@ div {
     margin-left: 68%;
     border: .4em solid white;
   }
-  /* line 36, ../sass/_john.scss */
+  /* line 34, ../sass/_john.scss */
   .john .johnNose {
     height: 4%;
     width: 12%;
@@ -1028,7 +1013,7 @@ div {
     /* Safari */
     transform: skewX(19deg) rotate(0deg);
   }
-  /* line 41, ../sass/_john.scss */
+  /* line 39, ../sass/_john.scss */
   .john .johnMouth {
     height: 2%;
     width: 10%;
@@ -1045,7 +1030,7 @@ div {
     /* Safari */
     transform: skewX(30deg) rotate(15deg);
   }
-  /* line 46, ../sass/_john.scss */
+  /* line 44, ../sass/_john.scss */
   .john .johnBody {
     height: 30%;
     width: 40%;
@@ -1061,7 +1046,7 @@ div {
     /* Safari */
     transform: skewY(8deg) rotate(0deg);
   }
-  /* line 51, ../sass/_john.scss */
+  /* line 49, ../sass/_john.scss */
   .john .johnHand {
     height: 7%;
     width: 40%;
@@ -1078,7 +1063,7 @@ div {
     /* Safari */
     transform: skewX(5deg) rotate(-45deg);
   }
-  /* line 56, ../sass/_john.scss */
+  /* line 54, ../sass/_john.scss */
   .john .johnHandWrist {
     height: 8%;
     width: 35%;
@@ -1095,7 +1080,7 @@ div {
     /* Safari */
     transform: skewX(50deg) rotate(185deg);
   }
-  /* line 61, ../sass/_john.scss */
+  /* line 59, ../sass/_john.scss */
   .john .johnShoppingBagHang {
     height: 10%;
     width: 15%;
@@ -1114,7 +1099,7 @@ div {
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
-  /* line 68, ../sass/_john.scss */
+  /* line 66, ../sass/_john.scss */
   .john .johnShoppingBag {
     height: 30%;
     width: 45%;
@@ -1127,7 +1112,7 @@ div {
     border-bottom: 8px outset brown;
     border-left: 8px solid brown;
   }
-  /* line 74, ../sass/_john.scss */
+  /* line 72, ../sass/_john.scss */
   .john .johnLeg {
     height: 30%;
     width: 25%;
@@ -1143,7 +1128,7 @@ div {
     /* Safari */
     transform: skewX(15deg) rotate(0deg);
   }
-  /* line 79, ../sass/_john.scss */
+  /* line 77, ../sass/_john.scss */
   .john .johnShoeRight {
     height: 4%;
     width: 20%;
@@ -1156,7 +1141,7 @@ div {
     margin-left: 47%;
     border-right: 4px solid white;
   }
-  /* line 84, ../sass/_john.scss */
+  /* line 82, ../sass/_john.scss */
   .john .johnShoeLeft {
     height: 4%;
     width: 20%;
@@ -1169,8 +1154,7 @@ div {
     margin-left: 60%;
   }
 
-  /* Shop with big car */
-  /* line 141, ../sass/app.scss */
+  /* line 1, ../sass/_shopLarge.scss */
   .roof {
     height: 15%;
     width: 55%;
@@ -1184,7 +1168,7 @@ div {
     background: repeating-linear-gradient(green 15%, white 30%);
   }
 
-  /* line 146, ../sass/app.scss */
+  /* line 6, ../sass/_shopLarge.scss */
   .wall {
     height: 35%;
     width: 50%;
@@ -1195,7 +1179,7 @@ div {
     margin-bottom: inherit;
     margin-left: 50%;
   }
-  /* line 149, ../sass/app.scss */
+  /* line 9, ../sass/_shopLarge.scss */
   .wall .window {
     height: 60%;
     width: 60%;
@@ -1206,7 +1190,7 @@ div {
     margin-bottom: inherit;
     margin-left: 3%;
   }
-  /* line 152, ../sass/app.scss */
+  /* line 12, ../sass/_shopLarge.scss */
   .wall .window table {
     border-collapse: collapse;
     height: 100%;
@@ -1215,26 +1199,68 @@ div {
     position: absolute;
     z-index: 2;
   }
-  /* line 157, ../sass/app.scss */
+  /* line 17, ../sass/_shopLarge.scss */
   .wall .window table, .wall .window td, .wall .window th {
     border: 1px solid black;
   }
-  /* line 160, ../sass/app.scss */
+  /* line 20, ../sass/_shopLarge.scss */
   .wall .window .smallWindow {
     visibility: hidden;
   }
-  /* line 163, ../sass/app.scss */
+  /* line 23, ../sass/_shopLarge.scss */
   .wall .window .largeWindow {
     visibility: visible;
   }
 
-  /* line 168, ../sass/app.scss */
-  .car1 {
-    visibility: hidden;
+  /* line 28, ../sass/_shopLarge.scss */
+  .door {
+    height: 90%;
+    width: 30%;
+    background: #fff;
+    position: absolute;
+    margin-top: 7%;
+    margin-right: inherit;
+    margin-bottom: inherit;
+    margin-left: 65%;
+  }
+  /* line 31, ../sass/_shopLarge.scss */
+  .door .doorHandle {
+    height: 10%;
+    width: 10%;
+    background: #106088;
+    position: relative;
+    border-radius: 90%;
+    margin-top: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 5%;
   }
 
-  /* Large car */
-  /* line 172, ../sass/app.scss */
+  /* line 36, ../sass/_shopLarge.scss */
+  .doorSign {
+    height: 7%;
+    width: 50%;
+    background: blue;
+    position: absolute;
+    margin-top: 65%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 20%;
+    -ms-transform: skewX(0deg) rotate(-20deg);
+    /* IE 9 */
+    -webkit-transform: skewX(0deg) rotate(-20deg);
+    /* Safari */
+    transform: skewX(0deg) rotate(-20deg);
+  }
+  /* line 40, ../sass/_shopLarge.scss */
+  .doorSign p {
+    font-size: 60%;
+    font-family: sans-serif;
+    color: white;
+    margin-top: 5%;
+  }
+
+  /* line 4, ../sass/_largeCar.scss */
   .car2 {
     position: absolute;
     height: 60%;
@@ -1247,7 +1273,7 @@ div {
     margin-left: 3%;
     z-index: 1;
   }
-  /* line 177, ../sass/app.scss */
+  /* line 9, ../sass/_largeCar.scss */
   .car2 .car2Body {
     height: 20%;
     width: 75%;
@@ -1259,7 +1285,7 @@ div {
     margin-left: 25%;
     border: 2px solid #C0C0C0;
   }
-  /* line 182, ../sass/app.scss */
+  /* line 14, ../sass/_largeCar.scss */
   .car2 .car2Storage {
     height: 20%;
     width: 25%;
@@ -1276,7 +1302,7 @@ div {
     /* Safari */
     transform: skewY(25deg) rotate(0deg);
   }
-  /* line 188, ../sass/app.scss */
+  /* line 20, ../sass/_largeCar.scss */
   .car2 .car2Bonet {
     height: 15%;
     width: 20%;
@@ -1293,7 +1319,7 @@ div {
     /* Safari */
     transform: skewX(65deg) rotate(0deg);
   }
-  /* line 194, ../sass/app.scss */
+  /* line 26, ../sass/_largeCar.scss */
   .car2 .car2BackGlass {
     height: 16%;
     width: 22%;
@@ -1310,7 +1336,7 @@ div {
     transform: skewY(0deg) rotate(25deg);
     border: 2px solid #C0C0C0;
   }
-  /* line 200, ../sass/app.scss */
+  /* line 32, ../sass/_largeCar.scss */
   .car2 .car2Roof {
     height: 13%;
     width: 27%;
@@ -1327,7 +1353,7 @@ div {
     transform: skewX(65deg) rotate(0deg);
     border: 2px solid #C0C0C0;
   }
-  /* line 206, ../sass/app.scss */
+  /* line 38, ../sass/_largeCar.scss */
   .car2 .car2Window {
     height: 20%;
     width: 10%;
@@ -1344,7 +1370,7 @@ div {
     transform: skewX(65deg) rotate(10deg);
     border: 2px solid #C0C0C0;
   }
-  /* line 212, ../sass/app.scss */
+  /* line 44, ../sass/_largeCar.scss */
   .car2 .car2WheelFront {
     height: 23.5%;
     width: 16.65%;
@@ -1357,7 +1383,7 @@ div {
     margin-left: 65%;
     border: 8px solid #5e4545;
   }
-  /* line 217, ../sass/app.scss */
+  /* line 49, ../sass/_largeCar.scss */
   .car2 .car2WheelRear {
     height: 23.5%;
     width: 16.65%;
@@ -1370,54 +1396,4 @@ div {
     margin-left: 35%;
     border: 8px solid #5e4545;
   }
-
-  /* line 223, ../sass/app.scss */
-  .door {
-    height: 90%;
-    width: 30%;
-    background: #fff;
-    position: absolute;
-    margin-top: 7%;
-    margin-right: inherit;
-    margin-bottom: inherit;
-    margin-left: 65%;
-  }
-  /* line 226, ../sass/app.scss */
-  .door .doorHandle {
-    height: 10%;
-    width: 10%;
-    background: #106088;
-    position: relative;
-    border-radius: 90%;
-    margin-top: 100%;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 5%;
-  }
-
-  /* line 231, ../sass/app.scss */
-  .doorSign {
-    height: 7%;
-    width: 50%;
-    background: blue;
-    position: absolute;
-    margin-top: 65%;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 20%;
-    -ms-transform: skewX(0deg) rotate(-20deg);
-    /* IE 9 */
-    -webkit-transform: skewX(0deg) rotate(-20deg);
-    /* Safari */
-    transform: skewX(0deg) rotate(-20deg);
-  }
-  /* line 235, ../sass/app.scss */
-  .doorSign p {
-    font-size: 60%;
-    font-family: sans-serif;
-    color: white;
-    margin-top: 5%;
-  }
 }
-/*******************************************************/
-/* Scene for very-Large Screen. */

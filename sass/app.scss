@@ -1,246 +1,40 @@
 /* 
-* Sociomantic HTML/CSS Task
-* Completed by Neha Chaudhary Seth
+*  HTML/CSS Task
 */
 @import "compass/css3";
 @import "_mixins";
-
-    * {@include box-sizing(border-box);}
-    body {
-        font-size: 16px;
-        font-family: Helvetica, Arial, Sans-Serif;
-    }
-    // Sets scene display area
-    .container {
-        @box(100%, 98%, inherit,inherit);
-        //margin: 0 auto;
-        display: block;
-    }
-    div {
-        @include box(100%, 100%, transparent);
-        float:left;
-        text-align:center;
- }
-   
-/*******************************************************/
-/* Scene for small Screen. */
-    @import "_responsive";
-    @import "_john";
-    .roof{
-        @include shapeCircle(8.33%, 25%, #106000, 130% 10% 0 0,absolute);
-        @include margins(50%, inherit, inherit, 66.66%);
-    }
-    .wall{
-       @include box (25%, 25%, blue,absolute);
-        @include margins(58.33%, inherit, inherit, 66.66%);
+* {@include box-sizing(border-box);}
+body {
+    font-size: 16px;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+// Sets scene display area
+.container {
+    @include box(0%, 98%, inherit,inherit);
+    display: block; 
+}
+div {
+    @include box(100%, 100%, transparent,inherit);
+    float:left;
+    text-align:center;
     }
 
-    .door{
-        @include box(90%, 40%, #fff, absolute);
-        @include margins(10%, inherit, inherit, 33.33%);
-        .doorHandle{
-            @include shapeCircle(10%, 10%, #106088, 90%,relative);
-            @include margins(80%, 0, 0, 5%);
-        }
-    }
-    .doorSign{
-         @include box(7%, 50%, blue,absolute);
-        @include margins(50%, 0, 0, 20%);
-        @include transform(0, -20); 
-    & p{
-       font-size: 60%;
-        color: white;
-        margin-top: 10%;
-        }
-    }
-/*******************************************************/
-/* Scene for Medium Screen. */
+// Scene for small Screen. 
+@import "_responsive";
+@import "_john";
+@import "_shopVerySmall";
+
+// Scene for Medium Screen
 @media only screen and (min-width: 481px) { 
     @import "_responsive";
     @import "_john";
-/* Shop with small car*/ 
-    .roof{
-        @include shapeCircle(12.50%, 45%, transparent, 130% 10% 0 0,absolute);
-        @include margins(37.66%, inherit, inherit, 53.33%);
-        background: repeating-linear-gradient(to right, blue 20%, gray 30%);
-    }
-    .wall{
-       @include box (30%, 40%, blue,absolute);
-        @include margins(50%, inherit, inherit, 58.33%);
-    .window{
-        @include box (60%, 60%, white,absolute);
-        @include margins(10%, inherit, inherit, 3%);
-        table {
-            border-collapse: collapse;
-            @include box (100%, 100%, transparent,absolute);
-            z-index: 2;
-            }
-        table, td {
-            border: 1px solid black;
-        }
-        .largeWindow{
-            visibility: hidden;
-        }
-    }
+    @import "_shopMedium";
+    @import "_smallCar";
 }
-    .carSmall{
-         @include box (60%, 60%, white,absolute);
-        @include margins(10%, inherit, inherit, 3%);
-        z-index: 1;
-        .carRoof{
-            @include shapeCircle(40%, 55%, gray, 130% 60% 0 0,absolute);
-            @include margins(15%, inherit, inherit, 20%);
-        }
-        .carBody{
-            @include shapeCircle(45%, 90%, gray, 60% 60% 0 0,absolute);
-            @include margins(30%, inherit, inherit, 5%);
-        }
-        .carWheelFront{
-            @include shapeCircle(23.5%, 16.65%, pink, 80%,absolute);
-            @include margins(52%, inherit, inherit, 20%);
-            @include border(10%, solid, darkgray);
-        }
-        .carWheelRear{
-            @include shapeCircle(23.5%, 16.65%, pink, 80%,absolute);
-            @include margins(52%, inherit, inherit, 65%);
-            @include border(10%, solid, darkgray);
-        }
-    }
-    .door{
-    @include box(90%, 30%, #fff, absolute);
-    @include margins(7%, inherit, inherit, 65%);
-        .doorHandle{
-            @include shapeCircle(10%, 10%, #106088, 90%,relative);
-            @include margins(100%, 0, 0, 5%);
-        }
-        
-    }
-    .doorSign{
-         @include box(7%, 50%, blue,absolute);
-        @include margins(65%, 0, 0, 20%);
-        @include transformX(0, -20);
-    & p{
-       font-size: 60%;
-        font-family: sans-serif;
-        color: white;
-        margin-top: 5%;
-    }
-    }
-}
-/*******************************************************/
-/* Shop Large */
+// Scene for Large Screen
 @media only screen and (min-width: 979px) { 
     @import "_responsive";
     @import "_john";
-    //   Variables
-    $red: #ff0000;
-    $wheelColor: #5e4545;
-    $silver: #C0C0C0;
-    
-    /* Shop with big car */
-    .roof{
-        @include shapeCircle(15%, 55%, #106000, 130% 10% 0 0,absolute);
-        @include margins(35%, inherit, inherit, 45.33%);
-        background: repeating-linear-gradient(green 15%, white 30%);
-    }
-    .wall{
-        @include box (35%, 50%, blue,absolute);
-        @include margins(50%, inherit, inherit, 50%);
-    .window{
-        @include box (60%, 60%, white,absolute);
-        @include margins(10%, inherit, inherit, 3%);
-        table {
-            border-collapse: collapse;
-            @include box(100%, 100%, transparent,absolute);
-            z-index: 2;
-        }
-        table, td, th {
-            border: 1px solid black;
-        }
-        .smallWindow{
-            visibility: hidden;
-        }
-        .largeWindow{   
-            visibility: visible;
-        }
-    }
-}   
-    .car1{
-        visibility: hidden;
-    }
-    /* Large car */
-    .car2{
-        position: absolute;
-        @include box (60%, 60%, white,absolute);
-        @include margins(10%, inherit, inherit, 3%);
-        z-index: 1;
-        .car2Body{
-            @include box(20%, 75%, $red, absolute);
-            @include margins(45%, inherit, inherit, 25%);
-            border: 2px solid $silver;
-        }
-        .car2Storage{
-            @include box(20%, 25%, $red, absolute);
-            @include margins(40%, inherit, inherit, 1%);
-            border: 2px solid $silver;
-            @include transformY(25,0);
-        }
-        .car2Bonet{
-            @include box(15%, 20%, $red, absolute);
-            @include margins(35%, inherit, inherit, 12%);
-            border: 2px solid $silver;
-            @include transformX(65,0);
-        }
-        .car2BackGlass{
-            @include box(16%, 22%, $red, absolute);
-            @include margins(30%, inherit, inherit, 23%);
-            @include transformY(0, 25);
-            border: 2px solid $silver;
-        }
-        .car2Roof{
-            @include box(13%, 27%, $red, absolute);
-            @include margins(26%, inherit, inherit, 36%);
-            @include transformX(65,0);
-            border: 2px solid $silver;
-        }
-        .car2Window{
-             @include box(20%, 10%, $red, absolute);
-            @include margins(33%, inherit, inherit, 77%);
-            @include transformX(65,10);
-            border: 2px solid $silver;
-        }
-        .car2WheelFront{
-            @include shapeCircle(23.5%, 16.65%, $silver, 80%,absolute);
-            @include margins(50%, inherit, inherit, 65%);
-            border: 8px solid $wheelColor;
-        }
-        .car2WheelRear{
-            @include shapeCircle(23.5%, 16.65%, $silver, 80%,absolute);
-            @include margins(50%, inherit, inherit, 35%);
-            border: 8px solid $wheelColor;
-        }
-    }
-    .door{
-    @include box(90%, 30%, #fff, absolute);
-    @include margins(7%, inherit, inherit, 65%);
-        .doorHandle{
-            @include shapeCircle(10%, 10%, #106088, 90%,relative);
-            @include margins(100%, 0, 0, 5%);
-        }
+    @import "_shopLarge";
+    @import "_largeCar";
 }
-    .doorSign{
-         @include box(7%, 50%, blue,absolute);
-        @include margins(65%, 0, 0, 20%);
-        @include transformX(0,-20);
-    & p{
-       font-size: 60%;
-        font-family: sans-serif;
-        color: white;
-        margin-top: 5%;
-    }
-    }
-}
-
-/*******************************************************/
-/* Scene for very-Large Screen. */
-@media only screen and (min-width: 1280px) { }

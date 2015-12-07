@@ -1,10 +1,7 @@
 .col {
     @include box(100%, 100%, transparent,relative);
-    //@include box(100%, 100%, transparent,relative);
     @include margins(0, 0, 0, 0);
     display: inline-block;
-    //padding:0;
-    //border-top: none;
   .spacer {
     position: inherit;
     padding-top: 100%;
@@ -12,12 +9,10 @@
 }
 .grid {
     @include margins(-35%, 0, 0, 0);
-    //height:60%;
     position: absolute;
     background: linear-gradient(#2098d1 10%, #f69066 55%, #75c700 70%) no-repeat  ;
-    //background-color: #fff;
     box-sizing: border-box;
     padding: 0;
     border: 1px solid darken(blue, 5%);
-   // @include browsercompatibility(all, 1s, ease-out);
+   
 }
