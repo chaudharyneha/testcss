@@ -1,0 +1,24 @@
+.roof{
+    @include shapeCircle(8.33%, 25%, #106000, 130% 10% 0 0,absolute);
+    @include margins(50%, inherit, inherit, 66.66%);
+}
+.wall{
+    @include box (25%, 25%, blue,absolute);
+    @include margins(58.33%, inherit, inherit, 66.66%);
+}
+.door{
+    @include box(90%, 40%, #fff, absolute);
+    @include margins(10%, inherit, inherit, 33.33%);
+    .doorHandle{
+        @include shapeCircle(10%, 10%, #106088, 90%,relative);
+        @include margins(80%, 0, 0, 5%);
+    }
+}
+.doorSign{
+    @include box(10%, 60%, blue,absolute);
+    @include margins(50%, 0, 0, 20%);
+    & p{
+        font-size: 20%;
+        color: white;
+        }
+}

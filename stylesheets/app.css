@@ -327,7 +327,7 @@ div {
   margin-left: 60%;
 }
 
-/* line 1, ../sass/_shopVerySmall.scss */
+/* line 1, ../sass/_shopSmall.scss */
 .roof {
   height: 8.33%;
   width: 25%;
@@ -340,7 +340,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 5, ../sass/_shopVerySmall.scss */
+/* line 5, ../sass/_shopSmall.scss */
 .wall {
   height: 25%;
   width: 25%;
@@ -352,7 +352,7 @@ div {
   margin-left: 66.66%;
 }
 
-/* line 9, ../sass/_shopVerySmall.scss */
+/* line 9, ../sass/_shopSmall.scss */
 .door {
   height: 90%;
   width: 40%;
@@ -363,7 +363,7 @@ div {
   margin-bottom: inherit;
   margin-left: 33.33%;
 }
-/* line 12, ../sass/_shopVerySmall.scss */
+/* line 12, ../sass/_shopSmall.scss */
 .door .doorHandle {
   height: 10%;
   width: 10%;
@@ -376,25 +376,21 @@ div {
   margin-left: 5%;
 }
 
-/* line 17, ../sass/_shopVerySmall.scss */
+/* line 17, ../sass/_shopSmall.scss */
 .doorSign {
-  height: 7%;
-  width: 50%;
+  height: 10%;
+  width: 60%;
   background: blue;
   position: absolute;
   margin-top: 50%;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 20%;
-  -moz-transform: 0;
-  -webkit-transform: 0;
-  transform: 0;
 }
-/* line 21, ../sass/_shopVerySmall.scss */
+/* line 20, ../sass/_shopSmall.scss */
 .doorSign p {
-  font-size: 60%;
+  font-size: 20%;
   color: white;
-  margin-top: 10%;
 }
 
 @media only screen and (min-width: 481px) {
